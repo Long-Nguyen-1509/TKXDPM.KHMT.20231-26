@@ -17,16 +17,12 @@ import subsystem.interbank.InterbankSubsystemController;
 
 
 /*
-* DUYBO
+* @ DuyVD
 * Coupling Cao Vì:
 * InterbankSubsystem triển khai trực tiếp InterbankInterface => Có phụ thuộc chặt chẽ giữa InterbankSubsystem và InterbankInterface.
 * Nếu InterbankInterface thay đổi, tất cả các lớp triển khai của InterbankSubsystem đều bị ảnh hưởng.
 *
 * */
-
-
-
-
 
 public class InterbankSubsystem implements InterbankInterface {
 
