@@ -32,3 +32,17 @@ This is a Capstone's source code for Software Design and Construction project
     - Define the project's base, write code for entity classes, set up mysql connection, write code for repository classes for basic CRUD
 
 </details>
+<br>
+<details>
+<summary>Vũ Đình Duy</summary>
+<br>
+
+- Assigned tasks:
+
+  - Do group exercises week 13
+
+- Implementation details:
+  - Find coupling functions, pull Request(s): https://github.com/Long-Nguyen-1509/TKXDPM.KHMT.20231-26/tree/excersice13
+</details>
+
+
