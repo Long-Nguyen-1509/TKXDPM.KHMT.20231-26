@@ -1,6 +1,7 @@
 .classpath
 .project
 .vscode
+.idea
 *.class
 /bin/
 aims.session.sql
