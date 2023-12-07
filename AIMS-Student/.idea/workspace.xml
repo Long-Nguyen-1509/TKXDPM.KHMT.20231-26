@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8762bb03-4010-4f08-b45d-7e9ea533b9b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/TKXDPM.KHMT.20231-26.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AIMS/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/AIMS-Student.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AIMS/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AIMS/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/DeliveryInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/DeliveryInfoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/InvoiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/InvoiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/PaymentTransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/PaymentTransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2YzV2QXWiwbwFZEiZzMS7mrOj0L" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8762bb03-4010-4f08-b45d-7e9ea533b9b0" name="Changes" comment="" />
+      <created>1701528187720</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701528187720</updated>
+      <workItem from="1701932366941" duration="453000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
