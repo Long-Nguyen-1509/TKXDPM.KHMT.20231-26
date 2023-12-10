@@ -22,7 +22,7 @@
   - Find coupling functions, pull Request(s): https://github.com/Long-Nguyen-1509/TKXDPM.KHMT.20231-26/tree/excersice13
 
 </details>
-
+</details>
 ---
 
 <details>
@@ -38,7 +38,7 @@
 
 - Implementation details:
     - Code and design front end, code back end
-    - <img src="![image](https://github.com/Long-Nguyen-1509/TKXDPM.KHMT.20231-26/assets/96781533/d0e4f7ff-45af-4a12-b88c-dc125faad6f2)
-">
+    - <img src="![image](https://github.com/Long-Nguyen-1509/TKXDPM.KHMT.20231-26/assets/96781533/d0e4f7ff-45af-4a12-b88c-dc125faad6f2)">
 
+</details>
 </details>
