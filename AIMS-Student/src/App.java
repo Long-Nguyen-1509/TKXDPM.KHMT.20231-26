@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import utils.Configs;
 import views.screen.home.*;
+import views.screen.login.LoginHandler;
 
 public class App extends Application {
 
@@ -48,10 +49,14 @@ public class App extends Application {
 			// After fade out, load actual content
 			fadeOut.setOnFinished((e) -> {
 				try {
-					HomeScreenHandler homeHandler = new HomeScreenHandler(primaryStage, Configs.HOME_PATH);
-					homeHandler.setScreenTitle("Home Screen");
-					homeHandler.setImage();
-					homeHandler.show();
+					LoginHandler loginHandler = new LoginHandler(primaryStage, Configs.LOGIN_PATH);
+					loginHandler.setScreenTitle("Login Screen");
+					loginHandler.show();
+
+//					HomeScreenHandler homeHandler = new HomeScreenHandler(primaryStage, Configs.HOME_PATH);
+//					homeHandler.setScreenTitle("Home Screen");
+//					homeHandler.setImage();
+//					homeHandler.show();
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}

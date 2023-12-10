@@ -17,6 +17,7 @@ import controller.HomeController;
 import controller.ViewCartController;
 import entity.cart.Cart;
 import entity.media.Media;
+import entity.user.User;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -43,10 +44,16 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
     private Label numMediaInCart;
 
     @FXML
+    private Label txtUsername;
+
+    @FXML
     private ImageView aimsImage;
 
     @FXML
     private ImageView cartImage;
+
+    @FXML
+    private ImageView avatarImage;
 
     @FXML
     private VBox vboxMedia1;
@@ -64,9 +71,11 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
     private SplitMenuButton splitMenuBtnSearch;
 
     private List homeItems;
+    private User.UserAccount userAccount;
 
-    public HomeScreenHandler(Stage stage, String screenPath) throws IOException{
+    public HomeScreenHandler(Stage stage, String screenPath, User.UserAccount userAccount) throws IOException{
         super(stage, screenPath);
+        this.txtUsername.setText(userAccount.getName());
     }
 
     public Label getNumMediaCartLabel(){
@@ -98,7 +107,8 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
             LOGGER.info("Errors occured: " + e.getMessage());
             e.printStackTrace();
         }
-        
+
+        this.setImage();
             
         aimsImage.setOnMouseClicked(e -> {
             addMediaHome(this.homeItems);
@@ -131,6 +141,10 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
         File file2 = new File(Configs.IMAGE_PATH + "/" + "cart.png");
         Image img2 = new Image(file2.toURI().toString());
         cartImage.setImage(img2);
+
+        File file3 = new File(Configs.IMAGE_PATH + "/" + "avatar.png");
+        Image img3 = new Image(file3.toURI().toString());
+        avatarImage.setImage(img3);
     }
 
     public void addMediaHome(List items){
