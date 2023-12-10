@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.TextField?>
@@ -11,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="788.0" prefWidth="1326.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="788.0" prefWidth="1326.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox prefHeight="104.0" prefWidth="1326.0" style="-fx-background-color: #ccebff; -fx-border-color: #33adff;">
          <children>
@@ -19,7 +24,7 @@
                <children>
                   <Pane prefHeight="102.0" prefWidth="237.0">
                      <children>
-                        <ImageView fx:id="aimsImage" fitHeight="94.0" fitWidth="115.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                        <ImageView fx:id="aimsImage" fitHeight="94.0" fitWidth="115.0" layoutX="3.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                            <image>
                               <Image url="@../../../../../../../../../../mnt/nguyenlm/DriveD/Documents/UNIVERSITY/PERSONAL/PROJECT/Java/TA-TKXDPM/AIMS/assets/images/Logo.png" />
                            </image>
@@ -33,7 +38,7 @@
                   </Pane>
                </children>
             </VBox>
-            <HBox prefHeight="102.0" prefWidth="882.0">
+            <HBox prefHeight="102.0" prefWidth="760.0">
                <children>
                   <Pane prefHeight="102.0" prefWidth="562.0">
                      <children>
@@ -56,9 +61,9 @@
                   </Pane>
                </children>
             </HBox>
-            <VBox prefHeight="102.0" prefWidth="161.0">
+            <VBox prefHeight="102.0" prefWidth="105.0">
                <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0">
+                  <Pane prefHeight="102.0" prefWidth="110.0">
                      <children>
                         <ImageView fx:id="cartImage" fitHeight="75.0" fitWidth="64.0" layoutX="14.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                            <image>
@@ -66,6 +71,24 @@
                            </image>
                         </ImageView>
                         <Label fx:id="numMediaInCart" layoutX="24.0" layoutY="11.0" prefHeight="16.0" prefWidth="64.0" text="0 media" textFill="#5091e6" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox prefHeight="102.0" prefWidth="228.0">
+               <children>
+                  <Pane prefHeight="102.0" prefWidth="201.0">
+                     <children>
+                        <ImageView fx:id="avatarImage" fitHeight="75.0" fitWidth="86.0" layoutX="138.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../../../../../../../../../../mnt/nguyenlm/DriveD/Documents/UNIVERSITY/PERSONAL/PROJECT/Java/TA-TKXDPM/AIMS/assets/images/cart.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="txtUsername" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="8.0" layoutY="69.0" prefHeight="20.0" prefWidth="124.0" text="username" textFill="#5091e6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
                      </children>
                   </Pane>
                </children>
