@@ -44,7 +44,7 @@
 </details>
 
 <details>
-  <summary>W14: 04/12/2023~10/12/2023 </summary>
+  <summary>W15: 04/12/2023~10/12/2023 </summary>
 <br>
 <details>
 <summary>Vũ Đình Duy</summary>
@@ -62,14 +62,14 @@
 </details>
 
 <details>
-  <summary>W14: 11/12/2023~17/12/2023 </summary>
+  <summary>W16: 11/12/2023~17/12/2023 </summary>
 <br>
 <details>
 <summary>Vũ Đình Duy</summary>
 <br>
 
 - Assigned tasks:
-  - Task 2: admin and user login 
+  - Task 2:Media item search function 
 
 
 - Implementation details:
