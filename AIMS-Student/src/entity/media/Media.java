@@ -1,5 +1,6 @@
 package entity.media;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -80,6 +81,25 @@ public class Media {
                 .setMediaURL(res.getString("imageUrl"))
                 .setPrice(res.getInt("price"))
                 .setType(res.getString("type"));
+            medium.add(media);
+        }
+        return medium;
+    }
+
+    public List getAllMediaByTitleLike(String title) throws SQLException{
+        PreparedStatement stm = AIMSDB.getConnection().prepareStatement("select * from Media where title like ");
+        stm.setString(1, "'%" + title + "%'");
+        ResultSet res = stm.executeQuery();
+        ArrayList medium = new ArrayList<>();
+        while (res.next()) {
+            Media media = new Media()
+                    .setId(res.getInt("id"))
+                    .setTitle(res.getString("title"))
+                    .setQuantity(res.getInt("quantity"))
+                    .setCategory(res.getString("category"))
+                    .setMediaURL(res.getString("imageUrl"))
+                    .setPrice(res.getInt("price"))
+                    .setType(res.getString("type"));
             medium.add(media);
         }
         return medium;

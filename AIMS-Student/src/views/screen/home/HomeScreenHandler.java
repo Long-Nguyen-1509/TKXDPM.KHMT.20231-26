@@ -7,12 +7,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
 import common.exception.ViewCartException;
-import controller.BaseController;
 import controller.HomeController;
 import controller.ViewCartController;
 import entity.cart.Cart;
@@ -20,16 +18,14 @@ import entity.media.Media;
 import entity.user.User;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.SplitMenuButton;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
+import org.apache.commons.lang3.StringUtils;
 import utils.Configs;
 import utils.Utils;
 import views.screen.BaseScreenHandler;
@@ -54,6 +50,9 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
 
     @FXML
     private ImageView avatarImage;
+
+    @FXML
+    private TextField tfSearch;
 
     @FXML
     private VBox vboxMedia1;
@@ -127,9 +126,12 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
             }
         });
         addMediaHome(this.homeItems);
-        addMenuItem(0, "Book", splitMenuBtnSearch);
-        addMenuItem(1, "DVD", splitMenuBtnSearch);
-        addMenuItem(2, "CD", splitMenuBtnSearch);
+        addMenuItem(0, "All", splitMenuBtnSearch);
+        addMenuItem(1, "Book", splitMenuBtnSearch);
+        addMenuItem(2, "DVD", splitMenuBtnSearch);
+        addMenuItem(3, "CD", splitMenuBtnSearch);
+
+        splitMenuBtnSearch.setOnMouseClicked(e -> searchMedia());
     }
 
     public void setImage(){
@@ -185,7 +187,9 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
             List filteredItems = new ArrayList<>();
             homeItems.forEach(me -> {
                 MediaHandler media = (MediaHandler) me;
-                if (media.getMedia().getTitle().toLowerCase().startsWith(text.toLowerCase())){
+                if (StringUtils.equals(text, "All")) {
+                    filteredItems.add(media);
+                } else if (media.getMedia().getTitle().toLowerCase().startsWith(text.toLowerCase())){
                     filteredItems.add(media);
                 }
             });
@@ -196,6 +200,21 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
         menuButton.getItems().add(position, menuItem);
     }
 
-    
+    private void searchMedia() {
+        String mediaName = tfSearch.getText().trim();
+        if(StringUtils.isBlank(mediaName)) {
+            addMediaHome(homeItems);
+        }
+        else {
+            List filteredItems = new ArrayList<>();
+            homeItems.forEach(me -> {
+                MediaHandler media = (MediaHandler) me;
+                if (StringUtils.contains(media.getMedia().getTitle().toLowerCase(), mediaName.toLowerCase())){
+                    filteredItems.add(media);
+                }
+            });
+            addMediaHome(filteredItems);
+        }
+    }
     
 }
