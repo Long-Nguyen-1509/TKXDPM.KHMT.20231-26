@@ -49,6 +49,8 @@ public class Configs {
 	public static final String CART_MEDIA_PATH = "/views/fxml/media_cart.fxml";
 	public static final String HOME_PATH  = "/views/fxml/home.fxml";
 	public static final String HOME_MEDIA_PATH = "/views/fxml/media_home.fxml";
+	public static final String ADMIN_PATH  = "/views/fxml/admin.fxml";
+	public static final String ADMIN_MEDIA_PATH = "/views/fxml/media_admin.fxml";
 	public static final String POPUP_PATH = "/views/fxml/popup.fxml";
 	public static final String LOGIN_PATH  = "/views/fxml/login.fxml";
 
