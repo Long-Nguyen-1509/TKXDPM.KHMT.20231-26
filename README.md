@@ -78,3 +78,21 @@
 
 </details>
 </details>
+
+<details>
+  <summary>W17: 18/12/2023~24/12/2023 </summary>
+<br>
+<details>
+<summary>Vũ Đình Duy</summary>
+<br>
+
+- Assigned tasks:
+  - Task 3:Item management screen for admin
+
+- Implementation details:
+    - Code and design front end, code back end
+    - ![403392733_259055613865757_1740458502937106002_n](https://github.com/Long-Nguyen-1509/TKXDPM.KHMT.20231-26/assets/96781533/a6514100-f293-44c3-977a-64d2a005dcd9)
+
+</details>
+</details>
+
