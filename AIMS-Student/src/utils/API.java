@@ -17,9 +17,6 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.logging.Logger;
 
-import entity.payment.CreditCard;
-import entity.payment.PaymentTransaction;
-
 public class API {
 
 	public static DateFormat DATE_FORMATER = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -33,7 +30,7 @@ public class API {
 		conn.setDoOutput(true);
 		conn.setRequestMethod("GET");
 		conn.setRequestProperty("Content-Type", "application/json");
-		conn.setRequestProperty("Authorization", "Bearer " + token);
+//		conn.setRequestProperty("Authorization", "Bearer " + token);
 		BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 		String inputLine;
 		StringBuilder respone = new StringBuilder(); // ising StringBuilder for the sake of memory and performance

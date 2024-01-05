@@ -105,7 +105,7 @@ public class CartScreenHandler extends BaseScreenHandler {
 		try {
 			// create placeOrderController and process the order
 			PlaceOrderController placeOrderController = new PlaceOrderController();
-			if (placeOrderController.getListCartMedia().size() == 0){
+			if (placeOrderController.getListCartMedia().isEmpty()){
 				PopupScreen.error("You don't have anything to place");
 				return;
 			}

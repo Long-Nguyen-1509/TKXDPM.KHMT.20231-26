@@ -1,42 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8762bb03-4010-4f08-b45d-7e9ea533b9b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.idea/TKXDPM.KHMT.20231-26.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../AIMS/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/AIMS-Student.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AIMS/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AIMS/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/DeliveryInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/DeliveryInfoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/InvoiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/InvoiceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/PaymentTransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/PaymentTransactionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/java/com/example/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AIMS/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AIMS/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/win/core-3.5.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/payment/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/QRGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AIMS-Student.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AIMS-Student.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/db/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/InvalidDeliveryInfoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/InvalidDeliveryInfoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PlaceOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PlaceOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/cart/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/cart/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/cart/CartMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/cart/CartMedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/media/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/payment/PaymentTransaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/InterbankInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/InterbankInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/InterbankSubsystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/InterbankSubsystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/interbank/InterbankSubsystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/interbank/InterbankSubsystemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/API.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Configs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Configs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/fxml/payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/payment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/fxml/shipping.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/shipping.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/cart/CartScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/cart/CartScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/invoice/InvoiceScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/invoice/InvoiceScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/payment/PaymentScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/payment/PaymentScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/shipping/ShippingScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/shipping/ShippingScreenHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Long-Nguyen-1509&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="45a65655-8b44-47f2-b9ca-1d5b8fe1150e" />
+        <option name="url" value="https://github.com/Long-Nguyen-1509/TKXDPM.KHMT.20231-26.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2YzV2QXWiwbwFZEiZzMS7mrOj0L" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="vue.rearranger.settings.migration" value="true" />
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Vcs Important Messages&quot;: &quot;VCS important messages&quot;,
+    &quot;Notification.DoNotAsk-Vcs Important Messages&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/payment&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/git/New folder/TKXDPM.KHMT.20231-26/AIMS-Student/lib/win/core-3.5.2.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\git\New folder\TKXDPM.KHMT.20231-26\AIMS-Student\lib\win" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="AIMS-Student" />
+      <option name="VM_PARAMETERS" value="--module-path C:\javafx-sdk-21.0.1\lib --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -52,5 +134,45 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/payment/Transaction.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/payment/Transaction.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/payment/Transaction.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="entity.order.Order" memberName="deliveryInfo" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AIMS_Student$App.ic" NAME="App Coverage Results" MODIFIED="1703786340097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

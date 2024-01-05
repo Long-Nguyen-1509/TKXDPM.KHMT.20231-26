@@ -1,6 +1,13 @@
 package entity.order;
 
+import entity.db.AIMSDB;
 import entity.media.Media;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.util.Random;
 
 public class OrderMedia {
     
@@ -47,4 +54,21 @@ public class OrderMedia {
         this.price = price;
     }
 
+    public void saveOrderMedia(int orderID) throws SQLException {
+        try (Connection connection = AIMSDB.getConnection()){
+            String insertOrderMedia = "INSERT INTO OrderMedia (mediaID, orderID, price, quantity) VALUES (?, ?, ?, ?)";
+            try (PreparedStatement orderMediaStatement = connection.prepareStatement(insertOrderMedia)) {
+                orderMediaStatement.setInt(1, media.getId());
+                orderMediaStatement.setInt(2, orderID);
+                orderMediaStatement.setInt(3, price);
+                orderMediaStatement.setInt(4, quantity);
+                orderMediaStatement.executeUpdate();
+            }catch (SQLException e) {
+                throw new SQLException("Error inserting order media" + e.getMessage());
+            }
+
+        } catch (SQLException e) {
+            throw new SQLException(e.getMessage());
+        }
+    }
 }

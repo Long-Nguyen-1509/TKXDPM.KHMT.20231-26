@@ -1,5 +1,8 @@
 import java.io.IOException;
+import java.sql.SQLException;
 
+import entity.media.Media;
+import entity.order.Order;
 import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -66,7 +69,7 @@ public class App extends Application {
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		launch(args);
 	}
 	

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="rootPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="pageTitle" layoutX="70.0" layoutY="1.0" prefHeight="96.0" prefWidth="216.0" text="Payment" textAlignment="CENTER" textFill="#5091e6">
          <font>
@@ -27,16 +27,16 @@
             <Font name="Segoe UI" size="24.0" />
          </font>
       </Label>
-      <VBox layoutX="114.0" layoutY="163.0" prefHeight="500.0" prefWidth="500.0">
+      <VBox layoutX="115.0" layoutY="163.0" prefHeight="500.0" prefWidth="500.0">
          <children>
-            <RadioButton disable="true" mnemonicParsing="false" selected="true" text="Credit Card">
+            <RadioButton fx:id="vnpRadio" disable="true" mnemonicParsing="false" selected="true" text="VNPay">
                <font>
                   <Font name="Calibri" size="24.0" />
                </font>
             </RadioButton>
          </children>
       </VBox>
-      <VBox layoutX="772.0" layoutY="158.0" prefHeight="500.0" prefWidth="500.0">
+      <VBox layoutX="772.0" layoutY="158.0" prefHeight="500.0" prefWidth="500.0" visible="false">
          <children>
             <Label prefHeight="50.0" prefWidth="182.0" text="Card number:">
                <font>
@@ -86,5 +86,11 @@
          </font>
       </Button>
       <ImageView fx:id="loadingImage" fitHeight="135.0" fitWidth="170.0" layoutX="553.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="qrImage" fitHeight="400.0" fitWidth="400.0" layoutX="849.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnQRGeneration" layoutX="965.0" layoutY="571.0" mnemonicParsing="false" text="Generate QR">
+         <font>
+            <Font name="Segoe UI" size="24.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
