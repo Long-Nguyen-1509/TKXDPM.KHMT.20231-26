@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import views.screen.BaseScreenHandler;
 
 import java.io.File;
@@ -51,30 +52,6 @@ public class OrderHistoryScreenHandler extends BaseScreenHandler {
         ObservableList<Order> observableOrders = FXCollections.observableArrayList(userOrderHistory);
 
         orderListView.setItems(observableOrders);
-        orderListView.setCellFactory(param -> new ListCell<Order>(){
-            @Override
-            protected void updateItem(String item, boolean empty) {
-                super.updateItem(item, empty);
-                if (empty || item==null) {
-                    setGraphic(null);
-                    setText(null);
-                    // other stuff to do...
 
-                }else{
-
-                    // set the width's
-                    setMinWidth(param.getWidth());
-                    setMaxWidth(param.getWidth());
-                    setPrefWidth(param.getWidth());
-
-                    // allow wrapping
-                    setWrapText(true);
-
-                    setText(item.toString());
-
-
-                }
-            }
-        });
     }
 }

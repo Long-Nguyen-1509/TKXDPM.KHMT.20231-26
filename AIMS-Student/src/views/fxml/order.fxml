@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -19,7 +20,11 @@
                 <Image url="@../../../assets/images/Logo.png" />
             </image>
         </ImageView>
-      <ListView fx:id="orderListView" layoutX="44.0" layoutY="155.2" prefWidth="1278.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="155.0" />
+        <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="44.0" layoutY="155.2" prefWidth="1278.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="155.0">
+            <content>
+                <ListView fx:id="orderListView" layoutX="44.0" layoutY="155.2" prefWidth="1278.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="155.0" />
+            </content>
+        </ScrollPane>
       <Label contentDisplay="CENTER" layoutX="481.0" layoutY="87.0" prefHeight="42.0" prefWidth="403.0" text="Lịch sử order của người dùng" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Segoe UI" size="24.0" />

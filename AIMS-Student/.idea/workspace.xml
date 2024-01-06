@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8762bb03-4010-4f08-b45d-7e9ea533b9b0" name="Changes" comment="finish placeorder payorder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/OrderHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/OrderHistoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/payment/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/payment/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/AIMS-Student/views/fxml/order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/AIMS-Student/views/fxml/order.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/fxml/order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/order.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/screen/order_history/OrderHistoryScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/order_history/OrderHistoryScreenHandler.java" afterDir="false" />
     </list>
@@ -21,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
