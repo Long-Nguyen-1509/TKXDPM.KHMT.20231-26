@@ -10,6 +10,7 @@ import entity.media.Media;
 import entity.payment.Transaction;
 import entity.user.User;
 import utils.Configs;
+import utils.DBUtils;
 
 public class Order {
     private int id;
@@ -23,6 +24,7 @@ public class Order {
     public Order() throws SQLException {
         this.stm = AIMSDB.getConnection().createStatement();
         this.listOrderMedia = new ArrayList<>();
+        this.deliveryInfo = new HashMap<>();
     }
 
     public Order(int shippingFees, List<OrderMedia> listOrderMedia, HashMap<String, String> deliveryInfo, Transaction transaction, int userID) throws SQLException {
@@ -142,16 +144,18 @@ public class Order {
 
     }
 
-    public static List<Order> getAllOrderByUserID(int userID) throws SQLException{
-        String sql = "SELECT * FROM `Order` WHERE userID = ?" ;
-        Connection connection = AIMSDB.getConnection();
-        ResultSet res;
-        try (PreparedStatement stm = connection.prepareStatement(sql)) {
-            stm.setInt(1, userID);
-            res = stm.executeQuery();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+    public List<Order> getAllOrderByUserID(int userID) throws SQLException{
+        String sql = "SELECT * FROM 'Order' WHERE userID = " + userID + ";" ;
+//        Connection connection = AIMSDB.getConnection();
+        ResultSet  res = DBUtils.getResultSet(sql);
+
+//        try (PreparedStatement stm = connection.prepareStatement(sql)) {
+//            System.out.println("SQL Statement: " + sql);
+//            stm.setInt(1, userID);
+//            res = stm.executeQuery();
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        }
         List<Order> medium = new ArrayList<>();
         while (res.next()) {
             System.out.println(res);
@@ -163,9 +167,9 @@ public class Order {
             order.getDeliveryInfo().put("phone", res.getString("phone"));
             order.getDeliveryInfo().put("province", res.getString("province"));
             order.getDeliveryInfo().put("address", res.getString("address"));
-            List<OrderMedia> orderMediaList = OrderMedia.getAllOrderMediaByOrderId(order.getId());
+            List<OrderMedia> orderMediaList = new OrderMedia().getAllOrderMediaByOrderId(order.getId());
             order.getListOrderMedia().addAll(orderMediaList);
-            order.setTransaction(Transaction.getTransactionByOrderId(order.getId()));
+            order.setTransaction(new Transaction().getTransactionByOrderId(order.getId()));
             medium.add(order);
         }
         return medium;
@@ -173,7 +177,7 @@ public class Order {
 
     @Override
     public String toString() {
-        return String.format("Order{id=%d, shippingFees=%d, listOrderMedia=%s, deliveryInfo=%s, transaction=%s, userID=%d}",
-                id, shippingFees, listOrderMedia, deliveryInfo, transaction, userID);
+        return String.format("Order{id=%d, shippingFees=%d, deliveryInfo=%s, transaction=%s, userID=%d}",
+                id, shippingFees, deliveryInfo, transaction, userID);
     }
 }

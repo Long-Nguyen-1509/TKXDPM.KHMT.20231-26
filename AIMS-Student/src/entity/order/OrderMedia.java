@@ -2,6 +2,7 @@ package entity.order;
 
 import entity.db.AIMSDB;
 import entity.media.Media;
+import utils.DBUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -70,22 +71,15 @@ public class OrderMedia {
         }
     }
 
-    public static List<OrderMedia> getAllOrderMediaByOrderId(int orderId) throws SQLException {
-        String sql = "SELECT * FROM `OrderMedia` WHERE orderID = ?";
-        Connection connection = AIMSDB.getConnection();
-        ResultSet res;
-        try (PreparedStatement stm = connection.prepareStatement(sql)) {
-            stm.setInt(1, orderId);
-            res = stm.executeQuery();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+    public List<OrderMedia> getAllOrderMediaByOrderId(int orderId) throws SQLException {
+        String sql = "SELECT * FROM `OrderMedia` WHERE orderID = " + orderId + ";";
+        ResultSet  res = DBUtils.getResultSet(sql);
         List<OrderMedia> medium = new ArrayList<>();
         while (res.next()) {
             System.out.println(res);
             OrderMedia orderMedia = new OrderMedia();
-            Media media = new Media();
-            media.getMediaById(res.getInt("mediaID"));
+            Media newMedia = new Media();
+            newMedia.getMediaById(res.getInt("mediaID"));
             orderMedia.setMedia(media);
             orderMedia.setPrice(res.getInt("price"));
             orderMedia.setQuantity(res.getInt("quantity"));

@@ -9,7 +9,7 @@ import java.util.List;
 
 public class OrderHistoryController extends BaseController {
     public List<Order> getUserOrderHistory(int userId) throws SQLException {
-        List<Order> orderList = Order.getAllOrderByUserID(userId);
+        List<Order> orderList = new Order().getAllOrderByUserID(userId);
         System.out.println(orderList);
         return orderList;
     }

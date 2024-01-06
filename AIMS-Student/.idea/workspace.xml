@@ -5,42 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8762bb03-4010-4f08-b45d-7e9ea533b9b0" name="Changes" comment="finish placeorder payorder">
-      <change afterPath="$PROJECT_DIR$/lib/win/jackson-annotations-2.16.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/win/jackson-core-2.16.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/win/jackson-databind-2.16.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/OrderHistoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/fxml/order.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/screen/order_history/OrderHistoryScreenHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AIMS-Student.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AIMS-Student.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/db/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/db/aims.sqbpro" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.sqbpro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/AIMS-Student/db/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/AIMS-Student/db/aims.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/AIMS-Student/db/aims.sqbpro" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/AIMS-Student/db/aims.sqbpro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/AIMS-Student/views/fxml/payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/AIMS-Student/views/fxml/payment.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/AIMS-Student/views/fxml/result.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/AIMS-Student/views/fxml/result.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/OrderHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/OrderHistoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/payment/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/payment/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subsystem/InterbankInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/InterbankInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subsystem/InterbankSubsystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/InterbankSubsystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subsystem/interbank/InterbankBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/interbank/InterbankBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/subsystem/interbank/InterbankSubsystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/interbank/InterbankSubsystemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/API.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Configs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Configs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/QRGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/QRGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/fxml/payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/payment.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/fxml/result.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/result.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/screen/home/HomeScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/home/HomeScreenHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/screen/payment/PaymentScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/payment/PaymentScreenHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/screen/payment/ResultScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/payment/ResultScreenHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nodejs_VNP-helper-server/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/../nodejs_VNP-helper-server/aims.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nodejs_VNP-helper-server/aims.sqbpro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nodejs_VNP-helper-server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nodejs_VNP-helper-server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nodejs_VNP-helper-server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../nodejs_VNP-helper-server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nodejs_VNP-helper-server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../nodejs_VNP-helper-server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/fxml/order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/order.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/order_history/OrderHistoryScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/order_history/OrderHistoryScreenHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

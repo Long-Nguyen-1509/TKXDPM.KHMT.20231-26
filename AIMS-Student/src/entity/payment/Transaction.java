@@ -4,6 +4,7 @@ import entity.db.AIMSDB;
 import entity.media.Media;
 import entity.order.Order;
 import entity.order.OrderMedia;
+import utils.DBUtils;
 
 import java.sql.*;
 import java.time.Instant;
@@ -137,16 +138,9 @@ public class Transaction {
             throw new SQLException(e.getMessage());
         }
     }
-    public static Transaction getTransactionByOrderId(int orderID) throws SQLException{
-        String sql = "SELECT * FROM `Transaction` WHERE orderID = ?";
-        Connection connection = AIMSDB.getConnection();
-        ResultSet res;
-        try (PreparedStatement stm = connection.prepareStatement(sql)) {
-            stm.setInt(1, orderID);
-            res = stm.executeQuery();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+    public Transaction getTransactionByOrderId(int orderID) throws SQLException{
+        String sql = "SELECT * FROM `Transaction` WHERE orderID = " + orderID;
+        ResultSet  res = DBUtils.getResultSet(sql);
         Transaction transaction = new Transaction();
         while (res.next()) {
             transaction.setId(res.getInt("id"));
