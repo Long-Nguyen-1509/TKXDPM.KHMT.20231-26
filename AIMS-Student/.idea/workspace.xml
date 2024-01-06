@@ -4,7 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8762bb03-4010-4f08-b45d-7e9ea533b9b0" name="Changes" comment="finish placeorder payorder" />
+    <list default="true" id="8762bb03-4010-4f08-b45d-7e9ea533b9b0" name="Changes" comment="finish placeorder payorder">
+      <change afterPath="$PROJECT_DIR$/lib/win/jackson-annotations-2.16.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/win/jackson-core-2.16.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/win/jackson-databind-2.16.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/OrderHistoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/fxml/order.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/screen/order_history/OrderHistoryScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AIMS-Student.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AIMS-Student.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/db/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/db/aims.sqbpro" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.sqbpro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/AIMS-Student/db/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/AIMS-Student/db/aims.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/AIMS-Student/db/aims.sqbpro" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/AIMS-Student/db/aims.sqbpro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/AIMS-Student/views/fxml/payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/AIMS-Student/views/fxml/payment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/AIMS-Student/views/fxml/result.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/AIMS-Student/views/fxml/result.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/payment/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/payment/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/InterbankInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/InterbankInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/InterbankSubsystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/InterbankSubsystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/interbank/InterbankBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/interbank/InterbankBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/interbank/InterbankSubsystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/interbank/InterbankSubsystemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/API.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Configs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Configs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/QRGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/QRGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/fxml/payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/payment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/fxml/result.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/result.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/home/HomeScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/home/HomeScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/payment/PaymentScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/payment/PaymentScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/payment/ResultScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/payment/ResultScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nodejs_VNP-helper-server/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/../nodejs_VNP-helper-server/aims.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nodejs_VNP-helper-server/aims.sqbpro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nodejs_VNP-helper-server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nodejs_VNP-helper-server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nodejs_VNP-helper-server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../nodejs_VNP-helper-server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nodejs_VNP-helper-server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../nodejs_VNP-helper-server/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +51,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -48,25 +86,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-Vcs Important Messages&quot;: &quot;VCS important messages&quot;,
-    &quot;Notification.DoNotAsk-Vcs Important Messages&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/payment&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/git/New folder/TKXDPM.KHMT.20231-26/AIMS-Student/lib/win/core-3.5.2.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Notification.DisplayName-DoNotAsk-Vcs Important Messages": "VCS important messages",
+    "Notification.DoNotAsk-Vcs Important Messages": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/payment",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/git/New folder/TKXDPM.KHMT.20231-26/AIMS-Student/lib/win/jackson-core-2.16.1.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\git\New folder\TKXDPM.KHMT.20231-26\AIMS-Student\lib\win" />
@@ -154,25 +192,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="finish placeorder payorder" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/entity/payment/Transaction.java</url>
-          <line>101</line>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/entity/payment/Transaction.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/entity/payment/Transaction.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="entity.order.Order" memberName="deliveryInfo" />

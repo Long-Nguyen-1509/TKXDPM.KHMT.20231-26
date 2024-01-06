@@ -40,40 +40,11 @@ import java.util.logging.Logger;
 
 public class InterbankSubsystem implements InterbankInterface {
 	private static Logger LOGGER = utils.Utils.getLogger(InterbankSubsystem.class.getName());
-//	/**
-//	 * Represent the controller of the subsystem
-//	 */
-//	private InterbankSubsystemController ctrl;
-//
-//	/**
-//	 * Initializes a newly created {@code InterbankSubsystem} object so that it
-//	 * represents an Interbank subsystem.
-//	 */
-//	public InterbankSubsystem() {
-//		String str = new String();
-//		this.ctrl = new InterbankSubsystemController();
-//	}
 
-//	/**
-//	 * @see InterbankInterface#payOrder(entity.payment.CreditCard, int,
-//	 *      java.lang.String)
-//	 */
-//	public PaymentTransaction payOrder(CreditCard card, int amount, String contents) {
-//		PaymentTransaction transaction = ctrl.payOrder(card, amount, contents);
-//		return transaction;
-//	}
-//
-//	/**
-//	 * @see InterbankInterface#refund(entity.payment.CreditCard, int,
-//	 *      java.lang.String)
-//	 */
-//	public PaymentTransaction refund(CreditCard card, int amount, String contents) {
-//		PaymentTransaction transaction = ctrl.refund(card, amount, contents);
-//		return transaction;
-//	}
+	private static InterbankSubsystemController interbankSubsystemController = new InterbankSubsystemController();
 
-    	@Override
-	public String generateVNPUrl(Invoice invoice) {
+	@Override
+	public String buildVNPTransaction(Invoice invoice, int transactionId) {
 		Order order = invoice.getOrder();
 		Map<String, String> vnp_Params = new HashMap<>();
 		vnp_Params.put("vnp_Version", Configs.VNP_VERSION);
@@ -86,9 +57,9 @@ public class InterbankSubsystem implements InterbankInterface {
 		vnp_Params.put("vnp_OrderType", Configs.VNP_ORDER_TYPE);
 		vnp_Params.put("vnp_ReturnUrl", Configs.VNP_RETURN_URL);
 
-		String txnRef = UUID.randomUUID().toString();
-		vnp_Params.put("vnp_TxnRef", txnRef);
-		vnp_Params.put("vnp_OrderInfo", "Thanh toan don hang: "+ txnRef);
+
+		vnp_Params.put("vnp_TxnRef", String.valueOf(transactionId));
+		vnp_Params.put("vnp_OrderInfo", "Thanh toan don hang: "+ transactionId);
 		Calendar cld = Calendar.getInstance(TimeZone.getTimeZone("Etc/GMT+7"));
 		vnp_Params.put("vnp_Amount", String.valueOf(invoice.getAmount()*100));
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
@@ -146,6 +117,14 @@ public class InterbankSubsystem implements InterbankInterface {
 		}
 	}
 
+	public void registerTransaction(int transactionId, int amount) {
+		interbankSubsystemController.registerTransaction(transactionId, amount);
+	}
+
+	public String fetchTransactionStatus(int transactionId) {
+        return interbankSubsystemController.fetchTransactionStatus(transactionId);
+	}
+
 	private static String bytesToHex(byte[] bytes) {
 		StringBuilder hexString = new StringBuilder();
 		for (byte b : bytes) {
@@ -154,11 +133,6 @@ public class InterbankSubsystem implements InterbankInterface {
 			hexString.append(hex);
 		}
 		return hexString.toString();
-	}
-
-	public BufferedImage generateVNPQR(Invoice invoice, int width, int height) throws Exception {
-		String url = generateVNPUrl(invoice);
-		return QRGenerator.generateQRCodeImage(url, width, height);
 	}
 
 }

@@ -86,11 +86,11 @@
          </font>
       </Button>
       <ImageView fx:id="loadingImage" fitHeight="135.0" fitWidth="170.0" layoutX="553.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="qrImage" fitHeight="400.0" fitWidth="400.0" layoutX="849.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="btnQRGeneration" layoutX="965.0" layoutY="571.0" mnemonicParsing="false" text="Generate QR">
+      <ImageView fx:id="qrImage" fitHeight="400.0" fitWidth="400.0" layoutX="476.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="qrLabel" layoutX="441.0" layoutY="107.0" text="Vui long quét mã QR để tiến hành thanh toán" textFill="BLUE" visible="false">
          <font>
             <Font name="Segoe UI" size="24.0" />
          </font>
-      </Button>
+      </Label>
    </children>
 </AnchorPane>

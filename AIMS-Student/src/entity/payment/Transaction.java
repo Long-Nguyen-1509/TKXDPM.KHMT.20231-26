@@ -10,6 +10,7 @@ import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Transaction {
@@ -18,22 +19,20 @@ public class Transaction {
     private Order order;
     private LocalDateTime createdAt;
     private String content;
-    private LocalDateTime paidAt;
     private String status;
     private String gateway;
+    private int amount;
 
     // Constructors
     public Transaction() throws SQLException {
-
     }
 
-    public Transaction(int id, Order order, LocalDateTime createdAt, String content, LocalDateTime paidAt, String status, String gateway) throws SQLException {
+    public Transaction(int id, Order order, LocalDateTime createdAt, String content, String status, String gateway) throws SQLException {
         this.stm = AIMSDB.getConnection().createStatement();
         this.id = id;
         this.order = order;
         this.createdAt = createdAt;
         this.content = content;
-        this.paidAt = paidAt;
         this.status = status;
         this.gateway = gateway;
     }
@@ -53,10 +52,6 @@ public class Transaction {
 
     public String getContent() {
         return content;
-    }
-
-    public LocalDateTime getPaidAt() {
-        return paidAt;
     }
 
     public String getStatus() {
@@ -83,10 +78,6 @@ public class Transaction {
         this.content = content;
     }
 
-    public void setPaidAt(LocalDateTime paidAt) {
-        this.paidAt = paidAt;
-    }
-
     public void setStatus(String status) {
         this.status = status;
     }
@@ -95,9 +86,18 @@ public class Transaction {
         this.gateway = gateway;
     }
 
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
     public void saveTransaction() throws SQLException {
-        try (Connection connection = AIMSDB.getConnection()) {
-            String sql = "INSERT INTO `Transaction` (id, orderID, createdAt, content, status, gateway, paidAt) " +
+        try {
+            Connection connection = AIMSDB.getConnection();
+            String sql = "INSERT INTO `Transaction` (id, orderID, createdAt, content, status, gateway, amount) " +
                     "VALUES (?, ?, ?, ?, ?, ?, ?)";
             try (PreparedStatement stm = connection.prepareStatement(sql)) {
                 LocalDateTime currentDateTime = LocalDateTime.now();
@@ -110,7 +110,7 @@ public class Transaction {
                 stm.setString(4, "Thanh toan don hang: " + order.getId());
                 stm.setString(5, "Pending");
                 stm.setString(6, gateway);
-                stm.setNull(7,  java.sql.Types.TIMESTAMP);
+                stm.setInt(7, amount);
                 stm.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -122,16 +122,46 @@ public class Transaction {
         }
     }
 
+    public void updateTransactionStatus(String status) throws SQLException {
+        try {Connection connection = AIMSDB.getConnection();
+            System.out.println("Entering transaction update");
+            String sql = "UPDATE 'Transaction' SET 'status' = ? WHERE id = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                preparedStatement.setString(1, status);
+                preparedStatement.setInt(2, id);
+                preparedStatement.executeUpdate();
+            }catch (SQLException e) {
+                throw new SQLException(e.getMessage());
+            }
+        } catch (SQLException e) {
+            throw new SQLException(e.getMessage());
+        }
+    }
+    public static Transaction getTransactionByOrderId(int orderID) throws SQLException{
+        String sql = "SELECT * FROM `Transaction` WHERE orderID = ?";
+        Connection connection = AIMSDB.getConnection();
+        ResultSet res;
+        try (PreparedStatement stm = connection.prepareStatement(sql)) {
+            stm.setInt(1, orderID);
+            res = stm.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        Transaction transaction = new Transaction();
+        while (res.next()) {
+            transaction.setId(res.getInt("id"));
+            transaction.setCreatedAt(res.getTimestamp("createdAt").toLocalDateTime());
+            transaction.setContent(res.getString("content"));
+            transaction.setStatus(res.getString("status"));
+            transaction.setGateway(res.getString("gateway"));
+            transaction.setAmount(res.getInt("amount"));
+        }
+        return transaction;
+    }
+
     @Override
     public String toString() {
-        return "Transaction{" +
-                "id=" + id +
-                ", orderID=" + order.getId() +
-                ", createdAt=" + createdAt +
-                ", content='" + content + '\'' +
-                ", paidAt=" + paidAt +
-                ", status='" + status + '\'' +
-                ", gateway='" + gateway + '\'' +
-                '}';
+        return String.format("Transaction{id=%d, createdAt=%s, content='%s', status='%s', gateway='%s', amount=%d}",
+                id, createdAt, content, status, gateway, amount);
     }
 }

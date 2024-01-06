@@ -17,9 +17,13 @@ public class ResultScreenHandler extends BaseScreenHandler {
 	private String result;
 	private String message;
 
-	public ResultScreenHandler(Stage stage, String screenPath, String result, String message) throws IOException {
+	public ResultScreenHandler(Stage stage, String screenPath, String message) throws IOException {
 		super(stage, screenPath);
-		resultLabel.setText(result);
+		this.message = message;
+		updateResult(message);
+	}
+
+	private void updateResult(String message) {
 		messageLabel.setText(message);
 	}
 
@@ -31,7 +35,7 @@ public class ResultScreenHandler extends BaseScreenHandler {
 
 	@FXML
 	private Button okButton;
-	
+
 	@FXML
 	private Label messageLabel;
 

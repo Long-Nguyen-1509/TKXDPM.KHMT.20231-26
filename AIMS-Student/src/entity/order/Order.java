@@ -8,6 +8,7 @@ import java.util.*;
 import entity.db.AIMSDB;
 import entity.media.Media;
 import entity.payment.Transaction;
+import entity.user.User;
 import utils.Configs;
 
 public class Order {
@@ -111,7 +112,8 @@ public class Order {
     }
 
     public void saveOrder() throws SQLException {
-        try (Connection connection = AIMSDB.getConnection()){
+        try {
+            Connection connection = AIMSDB.getConnection();
             Random random = new Random();
             int orderID = Math.abs(random.nextInt());
             String sql = "INSERT INTO `Order` (id, name, address, phone, userID, shipping_fees, province, rush) " +
@@ -125,39 +127,53 @@ public class Order {
                 stm.setInt(6, shippingFees);
                 stm.setString(7, deliveryInfo.get("province"));
                 stm.setBoolean(8, Boolean.parseBoolean(deliveryInfo.get("rush")));
-                System.out.println(stm);
                 stm.executeUpdate();
             } catch (SQLException e) {
                 throw new SQLException("Failed to insert order");
             }
-
-            for (OrderMedia orderMedia: listOrderMedia) {
-                orderMedia.saveOrderMedia(orderID);
-            }
-
             id = orderID;
-
+            for (OrderMedia orderMedia: listOrderMedia) {
+                orderMedia.saveOrderMedia(id);
+            }
             transaction.saveTransaction();
-
         } catch (SQLException e) {
             throw new SQLException(e.getMessage());
         }
+
     }
 
-    public List<Order> getOrderByUserID(int id) throws SQLException{
-        String sql = "SELECT * FROM `Order` WHERE userID = ?";
-        PreparedStatement stm = AIMSDB.getConnection().prepareStatement(sql);
-        stm.setInt(1, id);
-        ResultSet res = stm.executeQuery();
-        ArrayList<Order> medium = new ArrayList<>();
+    public static List<Order> getAllOrderByUserID(int userID) throws SQLException{
+        String sql = "SELECT * FROM `Order` WHERE userID = ?" ;
+        Connection connection = AIMSDB.getConnection();
+        ResultSet res;
+        try (PreparedStatement stm = connection.prepareStatement(sql)) {
+            stm.setInt(1, userID);
+            res = stm.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        List<Order> medium = new ArrayList<>();
         while (res.next()) {
             System.out.println(res);
             Order order = new Order();
             order.setId(res.getInt("id"));
             order.setUserID(res.getInt("userID"));
             order.setShippingFees(res.getInt("shipping_fees"));
+            order.getDeliveryInfo().put("name", res.getString("name"));
+            order.getDeliveryInfo().put("phone", res.getString("phone"));
+            order.getDeliveryInfo().put("province", res.getString("province"));
+            order.getDeliveryInfo().put("address", res.getString("address"));
+            List<OrderMedia> orderMediaList = OrderMedia.getAllOrderMediaByOrderId(order.getId());
+            order.getListOrderMedia().addAll(orderMediaList);
+            order.setTransaction(Transaction.getTransactionByOrderId(order.getId()));
             medium.add(order);
         }
         return medium;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Order{id=%d, shippingFees=%d, listOrderMedia=%s, deliveryInfo=%s, transaction=%s, userID=%d}",
+                id, shippingFees, listOrderMedia, deliveryInfo, transaction, userID);
     }
 }

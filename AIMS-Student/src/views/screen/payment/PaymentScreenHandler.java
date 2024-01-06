@@ -6,17 +6,16 @@ import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.concurrent.Delayed;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 import controller.PaymentController;
 import entity.cart.Cart;
 import common.exception.PlaceOrderException;
 import entity.invoice.Invoice;
 import entity.order.Order;
+import entity.payment.Transaction;
 import javafx.application.Platform;
+import javafx.beans.binding.Bindings;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -54,39 +53,46 @@ public class PaymentScreenHandler extends BaseScreenHandler {
 		super(stage, screenPath);
 		this.invoice = invoice;
 
-		btnQRGeneration.setOnMouseClicked(e -> {
-			try {
-				updateQRImage();
-			} catch (Exception ex) {
-                throw new RuntimeException(ex);
-            }
-        });
-
 		btnConfirmPayment.setOnMouseClicked(e -> {
 			try {
-				if (qrImage.getImage() != null) {
-					// Create and configure the ProgressIndicator
-					ProgressIndicator pi = new ProgressIndicator();
+				// Create and configure the ProgressIndicator
+				ProgressIndicator pi = new ProgressIndicator();
 
-					StackPane overlayPane = new StackPane();
-					overlayPane.setStyle("-fx-background-color: rgba(0, 0, 0, 0.2)");
+				StackPane overlayPane = new StackPane();
+				overlayPane.setStyle("-fx-background-color: rgba(0, 0, 0, 0.2)");
 
-					rootPane.setDisable(true);
-					overlayPane.getChildren().add(pi);
-					pi.setPrefSize(50,50);
-					rootPane.getChildren().add(overlayPane);
+				rootPane.setDisable(true);
+				overlayPane.getChildren().add(pi);
+				pi.setPrefSize(50,50);
+				rootPane.getChildren().add(overlayPane);
 
-					// Center the overlay pane within the rootPane
-					AnchorPane.setTopAnchor(overlayPane, 0.0);
-					AnchorPane.setRightAnchor(overlayPane, 0.0);
-					AnchorPane.setBottomAnchor(overlayPane, 0.0);
-					AnchorPane.setLeftAnchor(overlayPane, 0.0);
-					confirmToPayOrder();
-					((PaymentController) getBController()).emptyCart();
-				} else {
-					PopupScreen.error("You have to get the QR code first");
+				// Center the overlay pane within the rootPane
+				AnchorPane.setTopAnchor(overlayPane, 0.0);
+				AnchorPane.setRightAnchor(overlayPane, 0.0);
+				AnchorPane.setBottomAnchor(overlayPane, 0.0);
+				AnchorPane.setLeftAnchor(overlayPane, 0.0);
+				Transaction transaction = ((PaymentController) getBController()).confirmToPayOrder(invoice);
+				CompletableFuture<Void> qrCodeFuture = CompletableFuture.runAsync(() -> {
+					// Generate QR code logic
+					try {
+						generateVNPQR(transaction.getId());
+					} catch (Exception ex) {
+						throw new RuntimeException(ex);
+					}
+				});
+				qrCodeFuture.thenRun(() -> {
+					try {
+						confirmToPayOrderHandler(transaction);
+					} catch (Exception ex) {
+						throw new RuntimeException(ex);
+					}
+				});
+				try {
+					qrCodeFuture.get();
+
+				} catch (InterruptedException | ExecutionException exp) {
+					exp.printStackTrace(); // Handle exceptions
 				}
-
 			} catch (Exception exp) {
 				System.out.println(exp.getStackTrace());
 			}
@@ -114,35 +120,43 @@ public class PaymentScreenHandler extends BaseScreenHandler {
 	@FXML
 	private AnchorPane rootPane;
 
-void confirmToPayOrder() throws IOException, SQLException {
+	@FXML
+	private Label qrLabel;
 
-	PaymentController ctrl = (PaymentController) getBController();
-	int transactionId = ctrl.confirmToPayOrder(invoice);
-	try (ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor()) {
-		executorService.scheduleAtFixedRate(() -> {
+	void confirmToPayOrderHandler(Transaction transaction) throws Exception {
+		PaymentController ctrl = (PaymentController) getBController();
+		long startTime = System.currentTimeMillis();
+		long timeout = 10*1000;
+		while (true) {
+			if (System.currentTimeMillis() - startTime >= timeout) break;
+		}
+		String res = ctrl.processPaymentStatus(transaction);
+		Platform.runLater(() -> {
+			ctrl.emptyCart();
+			BaseScreenHandler resultScreen = null;
 			try {
-				String res = ctrl.fetchTransactionStatusById(transactionId);
-				if (!res.equals("Pending")) {
-					try {
-						BaseScreenHandler resultScreen = new ResultScreenHandler(this.stage, Configs.RESULT_SCREEN_PATH, "Result!", res);
-						resultScreen.setPreviousScreen(this);
-						resultScreen.setHomeScreenHandler(homeScreenHandler);
-						resultScreen.setScreenTitle("Result Screen");
-						resultScreen.show();
-						executorService.shutdown();
-					} catch (IOException e) {
-						throw new RuntimeException(e);
-					}
-				}
-			} catch (SQLException e) {
+				resultScreen = new ResultScreenHandler(this.stage, Configs.RESULT_SCREEN_PATH, res);
+			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
-		}, 0, 5, TimeUnit.SECONDS);
-	}
-}
+			resultScreen.setPreviousScreen(this);
+			resultScreen.setHomeScreenHandler(homeScreenHandler);
+			resultScreen.setScreenTitle("Result Screen");
+			resultScreen.show();
+		});
 
-	private void updateQRImage() throws Exception {
+	}
+
+	private void generateVNPQR(int transactionId) throws Exception {
 		PaymentController ctrl = (PaymentController) getBController();
-		qrImage.setImage(SwingFXUtils.toFXImage(ctrl.generateVNPQR(invoice,(int) qrImage.getFitWidth(),(int) qrImage.getFitHeight()), null));
+		qrLabel.setVisible(true);
+		Image image = SwingFXUtils.toFXImage(ctrl.generateVNPQR(invoice, transactionId), null);
+		qrImage.setPreserveRatio(true);
+		qrImage.setImage(image);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 }

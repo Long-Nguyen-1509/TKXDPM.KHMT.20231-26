@@ -52,6 +52,7 @@ public class Configs {
 	public static final String ADMIN_MEDIA_PATH = "/views/fxml/media_admin.fxml";
 	public static final String POPUP_PATH = "/views/fxml/popup.fxml";
 	public static final String LOGIN_PATH  = "/views/fxml/login.fxml";
+	public static final String ORDER_HISTORY_PATH = "/views/fxml/order.fxml";
 
 	public static Font REGULAR_FONT = Font.font("Segoe UI", FontWeight.NORMAL, FontPosture.REGULAR, 24);
 
@@ -73,8 +74,9 @@ public class Configs {
 	public static final String VNP_BANK_CODE = "NCB";
 	public static final String VNP_LOCALE = "vn";
 	public static final String VNP_ORDER_TYPE = "other";
-	public static final String VNP_RETURN_URL = "https://76b4-58-187-228-166.ngrok-free.app/api/ipn";
+	public static final String VNP_RETURN_URL = "https://848d-1-55-210-212.ngrok-free.app/api/ipn";
 	public static final String VNP_PAYMENT_URL = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-
-
+	public static final String POST_URL = "http://localhost:3000/api/add-transaction";
+	public static final String GET_URL = "http://localhost:3000/api/check-status";
+	public static int USER_ID = 2;
 }

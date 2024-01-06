@@ -25,49 +25,36 @@ import java.util.Random;
  *
  */
 public class PaymentController extends BaseController {
-	private final InterbankInterface interbank = new InterbankSubsystem();
+	private static InterbankInterface interbank = new InterbankSubsystem();
 
-	public BufferedImage generateVNPQR(Invoice invoice, int width, int height) throws Exception {
-		String url = interbank.generateVNPUrl(invoice);
-		return QRGenerator.generateQRCodeImage(url, width, height);
+	public BufferedImage generateVNPQR(Invoice invoice, int transactionId) throws Exception {
+		String url = interbank.buildVNPTransaction(invoice, transactionId);
+		return QRGenerator.generateQRCodeImage(url);
 	}
 
-	public int confirmToPayOrder(Invoice invoice) throws SQLException {
+	public Transaction confirmToPayOrder(Invoice invoice) throws SQLException {
 
 		Transaction transaction = new Transaction();
 		Random random = new Random();
-		int transactionID = Math.abs(random.nextInt());
+		int transactionId = Math.abs(random.nextInt());
 		transaction.setGateway("VNP");
-		transaction.setId(transactionID);
+		transaction.setAmount(invoice.getAmount());
+		transaction.setId(transactionId);
 		transaction.setOrder(invoice.getOrder());
-		transaction.saveTransaction();
 		invoice.getOrder().setTransaction(transaction);
 		invoice.getOrder().saveOrder();
-
-		return transaction.getId();
+		interbank.registerTransaction(transactionId, invoice.getAmount());
+		System.out.println("Created transaction with id" + transactionId);
+		return transaction;
 	}
 
-	public String fetchTransactionStatusById(int id) throws SQLException {
-		try (Connection connection = AIMSDB.getConnection()) {
-			String sql = "SELECT * FROM Transaction WHERE id = ?";
-			try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-				preparedStatement.setInt(1, id);
-
-				try (ResultSet resultSet = preparedStatement.executeQuery()) {
-					if (resultSet.next()) {
-						return resultSet.getString("status");
-					} else {
-						System.out.println("Transaction not found");
-						return null;
-					}
-				}
-			}
-		} catch (SQLException e) {
-			throw new SQLException(e.getMessage());
-		}
+	public String processPaymentStatus(Transaction transaction) throws SQLException {
+		String status = interbank.fetchTransactionStatus(transaction.getId());
+		transaction.updateTransactionStatus(status);
+		return status;
 	}
 
-	public void emptyCart(){
+	public void emptyCart() {
         Cart.getCart().emptyCart();
     }
 }
