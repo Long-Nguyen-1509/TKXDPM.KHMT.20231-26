@@ -5,10 +5,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.logging.Logger;
 
+import dto.MediaDto;
 import entity.db.AIMSDB;
+import org.junit.platform.commons.util.CollectionUtils;
 import utils.Utils;
 
 /**
@@ -44,14 +48,14 @@ public class Media {
         //stm = AIMSDB.getConnection().createStatement();
     }
 
-    public int getQuantity() throws SQLException{
+    public int getQuantityById() throws SQLException{
         int updated_quantity = getMediaById(id).quantity;
         this.quantity = updated_quantity;
         return updated_quantity;
     }
 
     public Media getMediaById(int id) throws SQLException{
-        String sql = "SELECT * FROM Media ;";
+        String sql = "SELECT * FROM Media where id="+ id +";";
         Statement stm = AIMSDB.getConnection().createStatement();
         ResultSet res = stm.executeQuery(sql);
 		if(res.next()) {
@@ -118,6 +122,33 @@ public class Media {
                           + "where id=" + id + ";");
     }
 
+    public void save(MediaDto mediaDto) throws SQLException {
+        String sql;
+        if(mediaDto.getId() != 0) {
+            sql = "update Media set " +
+                    "title='" + (Objects.nonNull(mediaDto.getTitle()) ? mediaDto.getTitle() : "") + "', " +
+                    "type='" + (Objects.nonNull(mediaDto.getType()) ? mediaDto.getType() : "book") + "', " +
+                    "category='" + (Objects.nonNull(mediaDto.getCategory()) ? mediaDto.getCategory() : "") + "', " +
+                    "value =" + mediaDto.getPrice() + ", " +
+                    "price=" + mediaDto.getPrice() + ", " +
+                    "quantity=" + mediaDto.getQuantity() + ", " +
+                    "imageUrl='" + (Objects.nonNull(mediaDto.getImageURL()) ? mediaDto.getImageURL() : "") + "' " +
+                    "where id=" + id + ";";
+
+        } else {
+            sql = "insert into Media(title, type, category, value, price, quantity, imageUrl) values (" +
+                    "'" + (Objects.nonNull(mediaDto.getTitle()) ? mediaDto.getTitle() : "") + "', " +
+                    "'" + (Objects.nonNull(mediaDto.getType()) ? mediaDto.getType() : "book") + "', " +
+                    "'" + (Objects.nonNull(mediaDto.getCategory()) ? mediaDto.getCategory() : "") + "', " +
+                    "" + mediaDto.getValue() + ", " +
+                    "" + mediaDto.getPrice() + ", " +
+                    "" + mediaDto.getQuantity() + ", " +
+                    "'" + (Objects.nonNull(mediaDto.getImageURL()) ? mediaDto.getImageURL() : "") + "')";
+        }
+        Statement stm = AIMSDB.getConnection().createStatement();
+        stm.executeUpdate(sql);
+    }
+
     // getter and setter 
     public int getId() {
         return this.id;
@@ -146,6 +177,14 @@ public class Media {
         return this;
     }
 
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
     public int getPrice() {
         return this.price;
     }
@@ -169,6 +208,10 @@ public class Media {
         return this;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
     public String getType() {
         return this.type;
     }
@@ -178,12 +221,21 @@ public class Media {
         return this;
     }
 
+
     public int getValue() {
         return value;
     }
 
     public void setValue(int value) {
         this.value = value;
+      
+    public static List<String> getMediaType() {
+        List<String> types = new ArrayList<>();
+        types.add("book");
+        types.add("cd");
+        types.add("dvd");
+        return types;
+
     }
 
     @Override

@@ -30,6 +30,7 @@ import org.apache.commons.lang3.StringUtils;
 import utils.Configs;
 import utils.Utils;
 import views.screen.BaseScreenHandler;
+import views.screen.admin.MediaAdminHandler;
 import views.screen.cart.CartScreenHandler;
 import views.screen.order_history.OrderHistoryScreenHandler;
 
@@ -171,17 +172,16 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
             VBox vBox = (VBox) node;
             vBox.getChildren().clear();
         });
-        while(!mediaItems.isEmpty()){
+        int row = (mediaItems.size() % 4 == 0) ? (mediaItems.size() / 4) : ((mediaItems.size() / 4) + 1);
+        for(int i = 1; i <= row; i++) {
             hboxMedia.getChildren().forEach(node -> {
-                int vid = hboxMedia.getChildren().indexOf(node);
-                VBox vBox = (VBox) node;
-                while(vBox.getChildren().size()<3 && !mediaItems.isEmpty()){
+                if(!mediaItems.isEmpty()) {
+                    VBox vBox = (VBox) node;
                     MediaHandler media = (MediaHandler) mediaItems.get(0);
                     vBox.getChildren().add(media.getContent());
                     mediaItems.remove(media);
                 }
             });
-            return;
         }
     }
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="337.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+   <Button fx:id="btnSave" layoutX="296.0" layoutY="271.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" text="Save" />
+      <Label fx:id="labelWarning" layoutX="28.0" layoutY="285.0" prefHeight="17.0" prefWidth="188.0" text="Có lỗi xảy ra vui lòng thử lại" textFill="#f80000" />
+      <Label layoutX="26.0" layoutY="32.0" text="Name" />
+      <TextField fx:id="tfName" layoutX="115.0" layoutY="28.0" prefHeight="25.0" prefWidth="252.0" />
+      <TextField fx:id="tfEmail" layoutX="115.0" layoutY="67.0" prefHeight="25.0" prefWidth="252.0" />
+      <Label layoutX="26.0" layoutY="71.0" text="Email" />
+      <Label layoutX="26.0" layoutY="150.0" text="Phone Number" />
+      <TextField fx:id="tfPhoneNumber" layoutX="115.0" layoutY="146.0" prefHeight="25.0" prefWidth="252.0" />
+      <TextField fx:id="tfAddress" layoutX="115.0" layoutY="107.0" prefHeight="25.0" prefWidth="252.0" />
+      <Label layoutX="26.0" layoutY="111.0" text="Address" />
+      <Label layoutX="28.0" layoutY="232.0" text="Password" />
+      <TextField fx:id="tfPassword" layoutX="117.0" layoutY="228.0" prefHeight="25.0" prefWidth="252.0" />
+      <TextField fx:id="tfUsername" layoutX="117.0" layoutY="189.0" prefHeight="25.0" prefWidth="252.0" />
+      <Label layoutX="28.0" layoutY="193.0" text="Username" />
+      <Button fx:id="btnDelete" layoutX="216.0" layoutY="271.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" text="Delete" textFill="RED" />
+</children>
+</AnchorPane>

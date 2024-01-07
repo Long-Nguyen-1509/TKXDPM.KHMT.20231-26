@@ -74,6 +74,7 @@
                         </HBox>
                     </children>
                 </VBox>
-            </children></Pane>
+            </children>
+        </Pane>
     </children>
 </AnchorPane>

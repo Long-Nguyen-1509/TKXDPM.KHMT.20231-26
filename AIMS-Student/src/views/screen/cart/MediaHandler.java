@@ -103,7 +103,7 @@ public class MediaHandler extends FXMLScreenHandler {
 		spinner.setOnMouseClicked( e -> {
 			try {
 				int numOfProd = this.spinner.getValue();
-				int remainQuantity = cartMedia.getMedia().getQuantity();
+				int remainQuantity = cartMedia.getMedia().getQuantityById();
 				LOGGER.info("NumOfProd: " + numOfProd + " -- remainOfProd: " + remainQuantity);
 				if (numOfProd > remainQuantity){
 					LOGGER.info("product " + cartMedia.getMedia().getTitle() + " only remains " + remainQuantity + " (required " + numOfProd + ")");
