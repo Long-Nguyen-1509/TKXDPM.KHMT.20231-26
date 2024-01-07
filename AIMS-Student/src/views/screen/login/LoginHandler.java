@@ -14,6 +14,8 @@ import org.apache.commons.lang3.StringUtils;
 import utils.Configs;
 import utils.Utils;
 import views.screen.BaseScreenHandler;
+import views.screen.admin.AdminHandler;
+import views.screen.admin.AdminMediaHandler;
 import views.screen.home.HomeScreenHandler;
 
 import java.io.IOException;
@@ -72,6 +74,9 @@ public class LoginHandler extends BaseScreenHandler implements Initializable {
                 // nếu là admin thì vào màn admin
                 if(Objects.equals(userAccount.getRole(), User.UserRole.ADMIN)) {
                     LOGGER.info("login with admin " + userAccount.getUsername());
+                    AdminHandler adminHandler = new AdminHandler(this.stage, Configs.ADMIN_PATH, userAccount);
+                    adminHandler.setScreenTitle("Home Screen");
+                    adminHandler.show();
                 }
             }
             catch (LoginException loginException) {
