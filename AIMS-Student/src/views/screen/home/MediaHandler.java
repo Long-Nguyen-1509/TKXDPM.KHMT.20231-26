@@ -18,7 +18,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import utils.Utils;
 import views.screen.FXMLScreenHandler;
-import views.screen.home.HomeScreenHandler;
 import views.screen.popup.PopupScreen;
 
 public class MediaHandler extends FXMLScreenHandler{
@@ -51,7 +50,7 @@ public class MediaHandler extends FXMLScreenHandler{
         this.home = home;
         addToCartBtn.setOnMouseClicked(event -> {
             try {
-                if (spinnerChangeNumber.getValue() > media.getQuantity()) throw new MediaNotAvailableException();
+                if (spinnerChangeNumber.getValue() > media.getQuantityById()) throw new MediaNotAvailableException();
                 Cart cart = Cart.getCart();
                 // if media already in cart then we will increase the quantity by 1 instead of create the new cartMedia
                 CartMedia mediaInCart = home.getBController().checkMediaInCart(media);
@@ -64,13 +63,13 @@ public class MediaHandler extends FXMLScreenHandler{
                 }
 
                 // subtract the quantity and redisplay
-                media.setQuantity(media.getQuantity() - spinnerChangeNumber.getValue());
-                mediaAvail.setText(String.valueOf(media.getQuantity()));
+                media.setQuantity(media.getQuantityById() - spinnerChangeNumber.getValue());
+                mediaAvail.setText(String.valueOf(media.getQuantityById()));
                 home.getNumMediaCartLabel().setText(String.valueOf(cart.getTotalMedia() + " media"));
                 PopupScreen.success("The media " + media.getTitle() + " added to Cart");
             } catch (MediaNotAvailableException exp) {
                 try {
-                    String message = "Not enough media:\nRequired: " + spinnerChangeNumber.getValue() + "\nAvail: " + media.getQuantity();
+                    String message = "Not enough media:\nRequired: " + spinnerChangeNumber.getValue() + "\nAvail: " + media.getQuantityById();
                     LOGGER.severe(message);
                     PopupScreen.error(message);
                 } catch (Exception e) {
@@ -99,7 +98,7 @@ public class MediaHandler extends FXMLScreenHandler{
 
         mediaTitle.setText(media.getTitle());
         mediaPrice.setText(Utils.getCurrencyFormat(media.getPrice()));
-        mediaAvail.setText(Integer.toString(media.getQuantity()));
+        mediaAvail.setText(Integer.toString(media.getQuantityById()));
         spinnerChangeNumber.setValueFactory(
             new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 1)
         );

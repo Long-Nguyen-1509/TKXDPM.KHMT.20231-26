@@ -19,7 +19,7 @@ public class BaseScreenHandler extends FXMLScreenHandler {
 	protected Hashtable<String, String> messages;
 	private BaseController bController;
 
-	private BaseScreenHandler(String screenPath) throws IOException {
+	protected BaseScreenHandler(String screenPath) throws IOException {
 		super(screenPath);
 		this.stage = new Stage();
 	}
@@ -43,6 +43,12 @@ public class BaseScreenHandler extends FXMLScreenHandler {
 		}
 		this.stage.setScene(this.scene);
 		this.stage.show();
+	}
+
+	public void closed() {
+		if(stage != null) {
+			stage.close();
+		}
 	}
 
 	public void setScreenTitle(String string) {

@@ -3,6 +3,9 @@ package utils;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
+
+import java.util.List;
+
 /**
  * @author nguyenlm Contains the configs for AIMS Project
  */
@@ -50,7 +53,11 @@ public class Configs {
 	public static final String HOME_PATH  = "/views/fxml/home.fxml";
 	public static final String HOME_MEDIA_PATH = "/views/fxml/media_home.fxml";
 	public static final String ADMIN_PATH  = "/views/fxml/admin.fxml";
+	public static final String ADMIN_MEDIA_PANE  = "/views/fxml/admin_media_pane.fxml";
+	public static final String ADMIN_ACCOUNT_PANE  = "/views/fxml/admin_account_pane.fxml";
 	public static final String ADMIN_MEDIA_PATH = "/views/fxml/media_admin.fxml";
+	public static final String ADMIN_MEDIA_EDIT_PATH = "/views/fxml/media_edit.fxml";
+	public static final String ADMIN_USER_EDIT_PATH = "/views/fxml/user_edit.fxml";
 	public static final String POPUP_PATH = "/views/fxml/popup.fxml";
 	public static final String LOGIN_PATH  = "/views/fxml/login.fxml";
 
