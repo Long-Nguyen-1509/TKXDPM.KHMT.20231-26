@@ -69,8 +69,13 @@ public class InvoiceScreenHandler extends BaseScreenHandler {
 		HashMap<String, String> deliveryInfo = invoice.getOrder().getDeliveryInfo();
 		name.setText(deliveryInfo.get("name"));
 		province.setText(deliveryInfo.get("province"));
+		if (deliveryInfo.get("rush").equals("true")) {
+			String instructions = deliveryInfo.get("instructions");
+			deliveryInfo.put("instructions", instructions.concat(" [Rush order]"));
+		}
 		instructions.setText(deliveryInfo.get("instructions"));
 		address.setText(deliveryInfo.get("address"));
+		phone.setText(deliveryInfo.get("phone"));
 		subtotal.setText(Utils.getCurrencyFormat(invoice.getOrder().getAmount()));
 		shippingFees.setText(Utils.getCurrencyFormat(invoice.getOrder().getShippingFees()));
 		int amount = invoice.getOrder().getAmount() + invoice.getOrder().getShippingFees();
