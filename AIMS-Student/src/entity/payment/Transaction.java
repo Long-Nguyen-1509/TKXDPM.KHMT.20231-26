@@ -148,7 +148,6 @@ public class Transaction {
         Transaction transaction = new Transaction();
         if (res.next()) {
             transaction.setId(res.getInt("id"));
-            // Explicitly set the timestamp format
             String timestamp = res.getString("createdAt");
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
             LocalDateTime localDateTime = LocalDateTime.parse(timestamp, formatter);

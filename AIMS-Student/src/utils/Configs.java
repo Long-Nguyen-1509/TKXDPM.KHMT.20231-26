@@ -74,7 +74,7 @@ public class Configs {
 	public static final String VNP_BANK_CODE = "NCB";
 	public static final String VNP_LOCALE = "vn";
 	public static final String VNP_ORDER_TYPE = "other";
-	public static final String VNP_RETURN_URL = "https://848d-1-55-210-212.ngrok-free.app/api/ipn";
+	public static final String VNP_RETURN_URL = "https://87e9-1-55-255-7.ngrok-free.app/api/ipn";
 	public static final String VNP_PAYMENT_URL = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
 	public static final String POST_URL = "http://localhost:3000/api/add-transaction";
 	public static final String GET_URL = "http://localhost:3000/api/check-status";

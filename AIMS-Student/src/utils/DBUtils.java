@@ -10,7 +10,6 @@ public class DBUtils {
 
     public static ResultSet getResultSet(String sql) throws SQLException {
         Statement stm = AIMSDB.getConnection().createStatement();
-        ResultSet res = stm.executeQuery(sql);
-        return res;
+        return stm.executeQuery(sql);
     }
 }

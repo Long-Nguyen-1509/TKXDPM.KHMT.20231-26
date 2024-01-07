@@ -79,7 +79,7 @@ app.get("/api/ipn", (req, res) => {
                 updateColumns(
                   vnp_TxnRef,
                   {
-                    status: "VNP rrror",
+                    status: "VNP error",
                   },
                   (updateErr, result) => {
                     if (updateErr) {

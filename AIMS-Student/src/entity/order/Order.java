@@ -81,6 +81,10 @@ public class Order {
         this.deliveryInfo = deliveryInfo;
     }
 
+    public LocalDateTime getTransactionCreatedAt(){
+        return getTransaction().getCreatedAt();
+    }
+
     public int getAmount(){
         double amount = 0;
         for (OrderMedia object : listOrderMedia) {
@@ -171,6 +175,7 @@ public class Order {
             order.setTransaction(new Transaction().getTransactionByOrderId(order.getId()));
             medium.add(order);
         }
+        medium.sort(Comparator.comparing(Order::getTransactionCreatedAt).reversed());
         return medium;
     }
 
