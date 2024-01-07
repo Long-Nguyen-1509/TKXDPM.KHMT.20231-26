@@ -44,9 +44,9 @@ public interface InterbankInterface {
 //			throws PaymentException, UnrecognizedException;
 
 
-	public String buildVNPTransaction(Invoice invoice, int transactionId);
+    String buildVNPTransaction(Invoice invoice, int transactionId);
 
-	public String fetchTransactionStatus(int transactionId);
+	String fetchTransactionStatus(int transactionId);
 
-	public void registerTransaction(int transactionId, int amount);
+	void registerTransaction(int transactionId, int amount);
 }

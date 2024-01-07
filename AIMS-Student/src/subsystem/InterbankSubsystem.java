@@ -39,9 +39,9 @@ import java.util.logging.Logger;
 
 
 public class InterbankSubsystem implements InterbankInterface {
-	private static Logger LOGGER = utils.Utils.getLogger(InterbankSubsystem.class.getName());
+	private static final Logger LOGGER = utils.Utils.getLogger(InterbankSubsystem.class.getName());
 
-	private static InterbankSubsystemController interbankSubsystemController = new InterbankSubsystemController();
+	private static final InterbankSubsystemController interbankSubsystemController = new InterbankSubsystemController();
 
 	@Override
 	public String buildVNPTransaction(Invoice invoice, int transactionId) {

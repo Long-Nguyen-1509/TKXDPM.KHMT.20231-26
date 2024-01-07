@@ -17,7 +17,7 @@ import utils.Utils;
  */
 public class Media {
 
-    private static Logger LOGGER = Utils.getLogger(Media.class.getName());
+    private static final Logger LOGGER = Utils.getLogger(Media.class.getName());
 
     protected Statement stm;
     protected int id;
@@ -70,7 +70,7 @@ public class Media {
 
     public List getAllMedia() throws SQLException {
         Statement stm = AIMSDB.getConnection().createStatement();
-        try (ResultSet res = stm.executeQuery("select * from Media");) {
+        try (ResultSet res = stm.executeQuery("select * from Media")) {
             ArrayList medium = new ArrayList<>();
             while (res.next()) {
                 Media media = new Media()

@@ -1,4 +1,4 @@
-package common.exception;;
+package common.exception;
 
 /**
  * The ProcessInvoiceException wraps all unchecked exceptions You can use this

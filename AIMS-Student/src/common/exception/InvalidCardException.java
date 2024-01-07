@@ -1,4 +1,4 @@
-package common.exception;;
+package common.exception;
 
 public class InvalidCardException extends PaymentException {
 	public InvalidCardException() {

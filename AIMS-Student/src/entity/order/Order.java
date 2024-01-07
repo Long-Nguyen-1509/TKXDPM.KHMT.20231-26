@@ -158,7 +158,6 @@ public class Order {
 //        }
         List<Order> medium = new ArrayList<>();
         while (res.next()) {
-            System.out.println(res);
             Order order = new Order();
             order.setId(res.getInt("id"));
             order.setUserID(res.getInt("userID"));
@@ -177,7 +176,27 @@ public class Order {
 
     @Override
     public String toString() {
-        return String.format("Order{id=%d, shippingFees=%d, deliveryInfo=%s, transaction=%s, userID=%d}",
-                id, shippingFees, deliveryInfo, transaction, userID);
+        return String.format("Order no %d\n" +
+                        "Shipping fees: %d\n" +
+                        "Delivery info: \n" +
+                        "  -name: '%s'\n" +
+                        "  -phone: %s\n" +
+                        "  -province: '%s'\n" +
+                        "  -address: '%s'\n" +
+                        "Transaction: %s",
+                id, shippingFees, deliveryInfo.get("name"), deliveryInfo.get("phone"), deliveryInfo.get("province"), deliveryInfo.get("address"), transaction);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Order order = (Order) o;
+        return id == order.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

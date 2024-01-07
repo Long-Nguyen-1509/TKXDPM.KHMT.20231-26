@@ -26,7 +26,7 @@ public class PlaceOrderController extends BaseController{
     /**
      * Just for logging purpose
      */
-    private static Logger LOGGER = utils.Utils.getLogger(PlaceOrderController.class.getName());
+    private static final Logger LOGGER = utils.Utils.getLogger(PlaceOrderController.class.getName());
 
     /**
      * This method checks the avalibility of product when user click PlaceOrder button
@@ -147,13 +147,14 @@ public class PlaceOrderController extends BaseController{
         double shippingFees = 0;
         String province = order.getDeliveryInfo().get("province");
         int quantity = order.getTotalQuantity();
-        if (Cart.getCart().calSubtotal() < 100000) {
-            if (province.equals("Hà Nội") || province.equals("HCM")) {
-                shippingFees += 22000;
-            } else {
-                shippingFees += 30000;
-            }
+        if (Cart.getCart().calSubtotal() >= 100000) {
+            shippingFees = 0;
+        } else if (province.equals("Hà Nội") || province.equals("HCM")) {
+            shippingFees += 22000;
+        } else {
+            shippingFees += 30000;
         }
+
         if (Boolean.parseBoolean(order.getDeliveryInfo().get("rush"))) {
             shippingFees += quantity*10000;
         }

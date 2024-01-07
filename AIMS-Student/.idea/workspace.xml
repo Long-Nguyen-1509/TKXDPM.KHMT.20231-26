@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8762bb03-4010-4f08-b45d-7e9ea533b9b0" name="Changes" comment="finish placeorder payorder">
+      <change afterPath="$PROJECT_DIR$/lib/win/byte-buddy-1.14.11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/win/byte-buddy-agent-1.14.11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/win/mockito-core-5.8.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/OrderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/PlaceOrderControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AIMS-Student.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AIMS-Student.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/AIMS-Student/views/fxml/order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/AIMS-Student/views/fxml/order.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/fxml/order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/order.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/screen/order_history/OrderHistoryScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/order_history/OrderHistoryScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/db/aims.sqbpro" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.sqbpro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/AIMS-Student/db/aims.sqbpro" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/AIMS-Student/db/aims.sqbpro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/AimsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/AimsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/InternalServerErrorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/InternalServerErrorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/InvalidCardException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/InvalidCardException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/InvalidDeliveryInfoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/InvalidDeliveryInfoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/InvalidTransactionAmountException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/InvalidTransactionAmountException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/InvalidVersionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/InvalidVersionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/MediaNotAvailableException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/MediaNotAvailableException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/MediaUpdateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/MediaUpdateException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/PaymentException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/PaymentException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/ProcessInvoiceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/ProcessInvoiceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/SuspiciousTransactionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/SuspiciousTransactionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/UnrecognizedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/UnrecognizedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/ViewCartException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exception/ViewCartException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/OrderHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/OrderHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PlaceOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PlaceOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/cart/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/cart/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/db/AIMSDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/db/AIMSDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/invoice/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/invoice/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/media/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/payment/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/payment/CreditCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/payment/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/payment/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/InterbankInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/InterbankInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/InterbankSubsystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/InterbankSubsystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/API.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/MyMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/MyMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/FXMLScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/FXMLScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/admin/AdminHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/admin/AdminHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/admin/MediaAdminHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/admin/MediaAdminHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/cart/CartScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/cart/CartScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/cart/MediaHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/cart/MediaHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/home/HomeScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/home/HomeScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/home/MediaHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/home/MediaHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/invoice/InvoiceScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/invoice/InvoiceScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/payment/ResultScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/payment/ResultScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/shipping/ShippingScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/shipping/ShippingScreenHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +115,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "feature/payment",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/git/New folder/TKXDPM.KHMT.20231-26/AIMS-Student/lib/win/jackson-core-2.16.1.jar",
-    "project.structure.last.edited": "Modules",
+    "last_opened_file_path": "C:/git/New folder/TKXDPM.KHMT.20231-26/AIMS-Student/lib/win/byte-buddy-agent-1.14.11.jar",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
@@ -78,18 +128,66 @@
       <recent name="C:\git\New folder\TKXDPM.KHMT.20231-26\AIMS-Student\lib\win" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="AIMS-Student" />
-      <option name="VM_PARAMETERS" value="--module-path C:\javafx-sdk-21.0.1\lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\javafx-sdk-21.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIMS-Student" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OrderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaceOrderControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIMS-Student" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlaceOrderControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaceOrderControllerTest.calculateShippingFees_Subtotal100000_Any_RushOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIMS-Student" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlaceOrderControllerTest" />
+      <option name="METHOD_NAME" value="calculateShippingFees_Subtotal100000_Any_RushOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaceOrderControllerTest.calculateShippingFees_Subtotal99000_HCM_NoRushOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIMS-Student" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlaceOrderControllerTest" />
+      <option name="METHOD_NAME" value="calculateShippingFees_Subtotal99000_HCM_NoRushOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.OrderTest" />
+      <item itemvalue="JUnit.PlaceOrderControllerTest" />
+      <item itemvalue="JUnit.PlaceOrderControllerTest.calculateShippingFees_Subtotal99000_HCM_NoRushOrder" />
+      <item itemvalue="JUnit.PlaceOrderControllerTest.calculateShippingFees_Subtotal100000_Any_RushOrder" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.OrderTest" />
+        <item itemvalue="JUnit.PlaceOrderControllerTest" />
+        <item itemvalue="JUnit.PlaceOrderControllerTest.calculateShippingFees_Subtotal99000_HCM_NoRushOrder" />
+        <item itemvalue="JUnit.PlaceOrderControllerTest.calculateShippingFees_Subtotal100000_Any_RushOrder" />
       </list>
     </recent_temporary>
   </component>

@@ -41,9 +41,9 @@ public class MediaHandler extends FXMLScreenHandler{
     @FXML
     protected Button addToCartBtn;
 
-    private static Logger LOGGER = Utils.getLogger(MediaHandler.class.getName());
-    private Media media;
-    private HomeScreenHandler home;
+    private static final Logger LOGGER = Utils.getLogger(MediaHandler.class.getName());
+    private final Media media;
+    private final HomeScreenHandler home;
 
     public MediaHandler(String screenPath, Media media, HomeScreenHandler home) throws SQLException, IOException{
         super(screenPath);
@@ -66,7 +66,7 @@ public class MediaHandler extends FXMLScreenHandler{
                 // subtract the quantity and redisplay
                 media.setQuantity(media.getQuantity() - spinnerChangeNumber.getValue());
                 mediaAvail.setText(String.valueOf(media.getQuantity()));
-                home.getNumMediaCartLabel().setText(String.valueOf(cart.getTotalMedia() + " media"));
+                home.getNumMediaCartLabel().setText(cart.getTotalMedia() + " media");
                 PopupScreen.success("The media " + media.getTitle() + " added to Cart");
             } catch (MediaNotAvailableException exp) {
                 try {

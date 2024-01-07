@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 public class API {
 
 	public static DateFormat DATE_FORMATER = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-	private static Logger LOGGER = Utils.getLogger(Utils.class.getName());
+	private static final Logger LOGGER = Utils.getLogger(Utils.class.getName());
 
 	public static String post(String apiUrl, Map<String, String> data) throws IOException {
 		// Convert the Map to a JSON payload

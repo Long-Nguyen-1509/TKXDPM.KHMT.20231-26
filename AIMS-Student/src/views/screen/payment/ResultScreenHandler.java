@@ -15,7 +15,7 @@ import views.screen.BaseScreenHandler;
 public class ResultScreenHandler extends BaseScreenHandler {
 
 	private String result;
-	private String message;
+	private final String message;
 
 	public ResultScreenHandler(Stage stage, String screenPath, String message) throws IOException {
 		super(stage, screenPath);

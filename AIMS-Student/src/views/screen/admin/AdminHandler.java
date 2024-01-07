@@ -31,7 +31,7 @@ import java.util.logging.Logger;
 
 public class AdminHandler extends BaseScreenHandler implements Initializable {
 
-    private static Logger LOGGER = Utils.getLogger(InvoiceScreenHandler.class.getName());
+    private static final Logger LOGGER = Utils.getLogger(InvoiceScreenHandler.class.getName());
 
     @FXML
     private Label txtUsername;

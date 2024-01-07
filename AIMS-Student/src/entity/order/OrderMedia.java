@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class OrderMedia {
@@ -91,5 +92,20 @@ public class OrderMedia {
     @Override
     public String toString() {
         return String.format("OrderMedia{media=%s, price=%d, quantity=%d}", media.getTitle(), price, quantity);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        OrderMedia that = (OrderMedia) o;
+        return price == that.price &&
+                quantity == that.quantity &&
+                Objects.equals(media, that.media);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(media, price, quantity);
     }
 }

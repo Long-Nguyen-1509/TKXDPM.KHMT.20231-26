@@ -34,9 +34,9 @@ public class MediaAdminHandler extends FXMLScreenHandler {
     protected Label mediaAvail;
 
 
-    private static Logger LOGGER = Utils.getLogger(MediaHandler.class.getName());
-    private Media media;
-    private AdminHandler admin;
+    private static final Logger LOGGER = Utils.getLogger(MediaHandler.class.getName());
+    private final Media media;
+    private final AdminHandler admin;
 
     public MediaAdminHandler(String screenPath, Media media, AdminHandler admin) throws IOException{
         super(screenPath);

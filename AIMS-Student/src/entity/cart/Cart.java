@@ -9,12 +9,16 @@ import entity.media.Media;
 
 public class Cart {
     
-    private List<CartMedia> listCartMedia;
+    private final List<CartMedia> listCartMedia;
     private static Cart cartInstance;
 
     public static Cart getCart(){
         if(cartInstance == null) cartInstance = new Cart();
         return cartInstance;
+    }
+
+    public static void setCart(Cart cart) {
+        cartInstance = cart;
     }
 
     private Cart(){

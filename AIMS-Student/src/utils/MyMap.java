@@ -37,7 +37,7 @@ public class MyMap extends LinkedHashMap<String, Object> {
 			Map.Entry<String, Object> e = it.next();
 			String key = e.getKey();
 			Object value = e.getValue();
-			sb.append('"' + key.toString() + '"');
+			sb.append('"' + key + '"');
 			sb.append(':');
 			sb.append(value instanceof MyMap ? ((MyMap) value).toJSON() : ('"' + value.toString() + '"'));
 
@@ -74,8 +74,7 @@ public class MyMap extends LinkedHashMap<String, Object> {
 					value = MyMap.toMyMap(value).toString();
 				}
 			} catch (Exception ex) {
-				;
-			}
+            }
 			map.put(field.getName(), value);
 			field.setAccessible(false);
 		}
@@ -101,7 +100,7 @@ public class MyMap extends LinkedHashMap<String, Object> {
 		}
 
 		if (str.charAt(idx + 1) == '"') {
-			return new String();
+			return "";
 		}
 
 		int i = idx + 1;

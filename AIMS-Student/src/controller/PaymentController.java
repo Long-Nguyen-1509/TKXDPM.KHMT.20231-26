@@ -25,7 +25,7 @@ import java.util.Random;
  *
  */
 public class PaymentController extends BaseController {
-	private static InterbankInterface interbank = new InterbankSubsystem();
+	private static final InterbankInterface interbank = new InterbankSubsystem();
 
 	public BufferedImage generateVNPQR(Invoice invoice, int transactionId) throws Exception {
 		String url = interbank.buildVNPTransaction(invoice, transactionId);

@@ -48,7 +48,7 @@ public class ShippingScreenHandler extends BaseScreenHandler implements Initiali
 	@FXML
 	private CheckBox isRush;
 
-	private Order order;
+	private final Order order;
 
 	public ShippingScreenHandler(Stage stage, String screenPath, Order order) throws IOException {
 		super(stage, screenPath);
