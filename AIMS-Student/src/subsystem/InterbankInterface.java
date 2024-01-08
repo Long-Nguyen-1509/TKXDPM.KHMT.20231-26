@@ -2,8 +2,7 @@ package subsystem;
 
 import common.exception.PaymentException;
 import common.exception.UnrecognizedException;
-import entity.payment.CreditCard;
-import entity.payment.PaymentTransaction;
+import entity.invoice.Invoice;
 
 /**
  * The {@code InterbankInterface} class is used to communicate with the
@@ -26,8 +25,8 @@ public interface InterbankInterface {
 	 * @throws UnrecognizedException if responded with an unknown error code or
 	 *                               something goes wrong
 	 */
-	public abstract PaymentTransaction payOrder(CreditCard card, int amount, String contents)
-			throws PaymentException, UnrecognizedException;
+//	public abstract PaymentTransaction payOrder(CreditCard card, int amount, String contents)
+//			throws PaymentException, UnrecognizedException;
 
 	/**
 	 * Refund, and then return the payment transaction
@@ -41,7 +40,13 @@ public interface InterbankInterface {
 	 * @throws UnrecognizedException if responded with an unknown error code or
 	 *                               something goes wrong
 	 */
-	public abstract PaymentTransaction refund(CreditCard card, int amount, String contents)
-			throws PaymentException, UnrecognizedException;
+//	public abstract PaymentTransaction refund(CreditCard card, int amount, String contents)
+//			throws PaymentException, UnrecognizedException;
 
+
+    String buildVNPTransaction(Invoice invoice, int transactionId);
+
+	String fetchTransactionStatus(int transactionId);
+
+	void registerTransaction(int transactionId, int amount);
 }

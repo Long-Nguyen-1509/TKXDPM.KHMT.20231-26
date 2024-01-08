@@ -12,6 +12,7 @@ import java.util.logging.Logger;
 
 import common.exception.ViewCartException;
 import controller.HomeController;
+import controller.OrderHistoryController;
 import controller.ViewCartController;
 import entity.cart.Cart;
 import entity.media.Media;
@@ -30,6 +31,7 @@ import utils.Configs;
 import utils.Utils;
 import views.screen.BaseScreenHandler;
 import views.screen.cart.CartScreenHandler;
+import views.screen.order_history.OrderHistoryScreenHandler;
 
 
 public class HomeScreenHandler extends BaseScreenHandler implements Initializable{
@@ -87,7 +89,7 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
 
     @Override
     public void show() {
-        numMediaInCart.setText(String.valueOf(Cart.getCart().getListMedia().size()) + " media");
+        numMediaInCart.setText(Cart.getCart().getListMedia().size() + " media");
         super.show();
     }
 
@@ -123,6 +125,20 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
                 cartScreen.requestToViewCart(this);
             } catch (IOException | SQLException e1) {
                 throw new ViewCartException(Arrays.toString(e1.getStackTrace()).replaceAll(", ", "\n"));
+            }
+        });
+
+        avatarImage.setOnMouseClicked(e -> {
+            OrderHistoryScreenHandler orderHistoryScreenHandler;
+            try {
+                orderHistoryScreenHandler = new OrderHistoryScreenHandler(this.stage, Configs.ORDER_HISTORY_PATH);
+                orderHistoryScreenHandler.setHomeScreenHandler(this);
+                orderHistoryScreenHandler.setBController(new OrderHistoryController());
+                orderHistoryScreenHandler.show();
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
             }
         });
         addMediaHome(this.homeItems);
@@ -183,7 +199,7 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
                 vBox.getChildren().clear();
             });
 
-            // filter only media with the choosen category
+            // filter only media with the chosen category
             List filteredItems = new ArrayList<>();
             homeItems.forEach(me -> {
                 MediaHandler media = (MediaHandler) me;

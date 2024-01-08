@@ -10,9 +10,11 @@ import controller.PaymentController;
 import entity.invoice.Invoice;
 import entity.order.Order;
 import entity.order.OrderMedia;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -23,7 +25,7 @@ import views.screen.payment.PaymentScreenHandler;
 
 public class InvoiceScreenHandler extends BaseScreenHandler {
 
-	private static Logger LOGGER = Utils.getLogger(InvoiceScreenHandler.class.getName());
+	private static final Logger LOGGER = Utils.getLogger(InvoiceScreenHandler.class.getName());
 
 	@FXML
 	private Label pageTitle;
@@ -55,7 +57,7 @@ public class InvoiceScreenHandler extends BaseScreenHandler {
 	@FXML
 	private VBox vboxItems;
 
-	private Invoice invoice;
+	private final Invoice invoice;
 
 	public InvoiceScreenHandler(Stage stage, String screenPath, Invoice invoice) throws IOException {
 		super(stage, screenPath);
@@ -67,17 +69,22 @@ public class InvoiceScreenHandler extends BaseScreenHandler {
 		HashMap<String, String> deliveryInfo = invoice.getOrder().getDeliveryInfo();
 		name.setText(deliveryInfo.get("name"));
 		province.setText(deliveryInfo.get("province"));
+		if (deliveryInfo.get("rush").equals("true")) {
+			String instructions = deliveryInfo.get("instructions");
+			deliveryInfo.put("instructions", instructions.concat(" [Rush order]"));
+		}
 		instructions.setText(deliveryInfo.get("instructions"));
 		address.setText(deliveryInfo.get("address"));
+		phone.setText(deliveryInfo.get("phone"));
 		subtotal.setText(Utils.getCurrencyFormat(invoice.getOrder().getAmount()));
 		shippingFees.setText(Utils.getCurrencyFormat(invoice.getOrder().getShippingFees()));
 		int amount = invoice.getOrder().getAmount() + invoice.getOrder().getShippingFees();
 		total.setText(Utils.getCurrencyFormat(amount));
 		invoice.setAmount(amount);
-		invoice.getOrder().getlstOrderMedia().forEach(orderMedia -> {
+		invoice.getOrder().getListOrderMedia().forEach(orderMedia -> {
 			try {
 				MediaInvoiceScreenHandler mis = new MediaInvoiceScreenHandler(Configs.INVOICE_MEDIA_SCREEN_PATH);
-				mis.setOrderMedia((OrderMedia) orderMedia);
+				mis.setOrderMedia(orderMedia);
 				vboxItems.getChildren().add(mis.getContent());
 			} catch (IOException | SQLException e) {
 				System.err.println("errors: " + e.getMessage());
@@ -89,7 +96,8 @@ public class InvoiceScreenHandler extends BaseScreenHandler {
 	}
 
 	@FXML
-	void confirmInvoice(MouseEvent event) throws IOException {
+	void confirmInvoice(MouseEvent event) throws Exception {
+		PaymentController paymentController = new PaymentController();
 		BaseScreenHandler paymentScreen = new PaymentScreenHandler(this.stage, Configs.PAYMENT_SCREEN_PATH, invoice);
 		paymentScreen.setBController(new PaymentController());
 		paymentScreen.setPreviousScreen(this);

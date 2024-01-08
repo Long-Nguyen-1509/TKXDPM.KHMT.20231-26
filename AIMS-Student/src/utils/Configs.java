@@ -13,7 +13,6 @@ public class Configs {
 	public static final String GET_VEHICLECODE_URL = "https://ecopark-system-api.herokuapp.com/api/get-vehicle-code/1rjdfasdfas";
 	public static final String PROCESS_TRANSACTION_URL = "https://ecopark-system-api.herokuapp.com/api/card/processTransaction";
 	public static final String RESET_URL = "https://ecopark-system-api.herokuapp.com/api/card/reset";
-
 	// demo data
 	public static final String POST_DATA = "{"
 			+ " \"secretKey\": \"BUXj/7/gHHI=\" ,"
@@ -53,6 +52,7 @@ public class Configs {
 	public static final String ADMIN_MEDIA_PATH = "/views/fxml/media_admin.fxml";
 	public static final String POPUP_PATH = "/views/fxml/popup.fxml";
 	public static final String LOGIN_PATH  = "/views/fxml/login.fxml";
+	public static final String ORDER_HISTORY_PATH = "/views/fxml/order.fxml";
 
 	public static Font REGULAR_FONT = Font.font("Segoe UI", FontWeight.NORMAL, FontPosture.REGULAR, 24);
 
@@ -64,4 +64,19 @@ public class Configs {
 			"Phú Yên", "Quảng Nam", "Quảng Ngãi", "Đà Nẵng", "Bà Rịa-Vũng Tàu", "Bình Dương", "Bình Phước", "Đồng Nai",
 			"Tây Ninh", "Hồ Chí Minh", "An Giang", "Bạc Liêu", "Bến Tre", "Cà Mau", "Đồng Tháp", "Hậu Giang",
 			"Kiên Giang", "Long An", "Sóc Trăng", "Tiền Giang", "Trà Vinh", "Vĩnh Long", "Cần Thơ" };
+
+	public static final String VNP_VERSION = "2.1.0";
+	public static final String VNP_COMMAND = "pay";
+	public static final String VNP_TMN_CODE = "YOW7BYRC";
+	public static final String VNP_SECRET_HASH = "KKGIASHWQGOCMUWAQWIHKYTNZPSWURZN";
+	public static final String VNP_CURR_CODE = "VND";
+	public static final String VNP_IP_ADDR = "127.0.0.1";
+	public static final String VNP_BANK_CODE = "NCB";
+	public static final String VNP_LOCALE = "vn";
+	public static final String VNP_ORDER_TYPE = "other";
+	public static final String VNP_RETURN_URL = "https://848d-1-55-210-212.ngrok-free.app/api/ipn";
+	public static final String VNP_PAYMENT_URL = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
+	public static final String POST_URL = "http://localhost:3000/api/add-transaction";
+	public static final String GET_URL = "http://localhost:3000/api/check-status";
+	public static int USER_ID = 2;
 }

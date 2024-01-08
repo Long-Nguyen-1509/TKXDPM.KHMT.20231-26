@@ -28,7 +28,7 @@ import views.screen.shipping.ShippingScreenHandler;
 
 public class CartScreenHandler extends BaseScreenHandler {
 
-	private static Logger LOGGER = Utils.getLogger(CartScreenHandler.class.getName());
+	private static final Logger LOGGER = Utils.getLogger(CartScreenHandler.class.getName());
 
 	@FXML
 	private ImageView aimsImage;
@@ -105,7 +105,7 @@ public class CartScreenHandler extends BaseScreenHandler {
 		try {
 			// create placeOrderController and process the order
 			PlaceOrderController placeOrderController = new PlaceOrderController();
-			if (placeOrderController.getListCartMedia().size() == 0){
+			if (placeOrderController.getListCartMedia().isEmpty()){
 				PopupScreen.error("You don't have anything to place");
 				return;
 			}

@@ -14,6 +14,7 @@ import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -44,7 +45,10 @@ public class ShippingScreenHandler extends BaseScreenHandler implements Initiali
 	@FXML
 	private ComboBox<String> province;
 
-	private Order order;
+	@FXML
+	private CheckBox isRush;
+
+	private final Order order;
 
 	public ShippingScreenHandler(Stage stage, String screenPath, Order order) throws IOException {
 		super(stage, screenPath);
@@ -67,23 +71,26 @@ public class ShippingScreenHandler extends BaseScreenHandler implements Initiali
 	void submitDeliveryInfo(MouseEvent event) throws IOException, InterruptedException, SQLException {
 
 		// add info to messages
-		HashMap messages = new HashMap<>();
+		HashMap<String, String> messages = new HashMap<>();
 		messages.put("name", name.getText());
 		messages.put("phone", phone.getText());
 		messages.put("address", address.getText());
 		messages.put("instructions", instructions.getText());
 		messages.put("province", province.getValue());
+		messages.put("rush", String.valueOf(isRush.isSelected()));
 		try {
 			// process and validate delivery info
 			getBController().processDeliveryInfo(messages);
 		} catch (InvalidDeliveryInfoException e) {
+			PopupScreen.error(e.getMessage());
 			throw new InvalidDeliveryInfoException(e.getMessage());
 		}
-	
+
+		order.setDeliveryInfo(messages);
 		// calculate shipping fees
 		int shippingFees = getBController().calculateShippingFee(order);
 		order.setShippingFees(shippingFees);
-		order.setDeliveryInfo(messages);
+
 		
 		// create invoice screen
 		Invoice invoice = getBController().createInvoice(order);

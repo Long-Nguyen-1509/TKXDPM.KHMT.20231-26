@@ -17,7 +17,7 @@ import utils.Utils;
  */
 public class Media {
 
-    private static Logger LOGGER = Utils.getLogger(Media.class.getName());
+    private static final Logger LOGGER = Utils.getLogger(Media.class.getName());
 
     protected Statement stm;
     protected int id;
@@ -30,7 +30,7 @@ public class Media {
     protected String imageURL;
 
     public Media() throws SQLException{
-        stm = AIMSDB.getConnection().createStatement();
+//        stm = AIMSDB.getConnection().createStatement();
     }
 
     public Media (int id, String title, String category, int price, int quantity, String type) throws SQLException{
@@ -61,29 +61,32 @@ public class Media {
                 .setTitle(res.getString("title"))
                 .setQuantity(res.getInt("quantity"))
                 .setCategory(res.getString("category"))
-                .setMediaURL(res.getString("imageUrl"))
+                .setImageURL(res.getString("imageUrl"))
                 .setPrice(res.getInt("price"))
                 .setType(res.getString("type"));
         }
         return null;
     }
 
-    public List getAllMedia() throws SQLException{
+    public List getAllMedia() throws SQLException {
         Statement stm = AIMSDB.getConnection().createStatement();
-        ResultSet res = stm.executeQuery("select * from Media");
-        ArrayList medium = new ArrayList<>();
-        while (res.next()) {
-            Media media = new Media()
-                .setId(res.getInt("id"))
-                .setTitle(res.getString("title"))
-                .setQuantity(res.getInt("quantity"))
-                .setCategory(res.getString("category"))
-                .setMediaURL(res.getString("imageUrl"))
-                .setPrice(res.getInt("price"))
-                .setType(res.getString("type"));
-            medium.add(media);
+        try (ResultSet res = stm.executeQuery("select * from Media")) {
+            ArrayList medium = new ArrayList<>();
+            while (res.next()) {
+                Media media = new Media()
+                        .setId(res.getInt("id"))
+                        .setTitle(res.getString("title"))
+                        .setQuantity(res.getInt("quantity"))
+                        .setCategory(res.getString("category"))
+                        .setImageURL(res.getString("imageUrl"))
+                        .setPrice(res.getInt("price"))
+                        .setType(res.getString("type"));
+                medium.add(media);
+            }
+            return medium;
+        } catch (SQLException e) {
+            throw new SQLException(e.getMessage());
         }
-        return medium;
     }
 
     public List getAllMediaByTitleLike(String title) throws SQLException{
@@ -97,7 +100,7 @@ public class Media {
                     .setTitle(res.getString("title"))
                     .setQuantity(res.getInt("quantity"))
                     .setCategory(res.getString("category"))
-                    .setMediaURL(res.getString("imageUrl"))
+                    .setImageURL(res.getString("imageUrl"))
                     .setPrice(res.getInt("price"))
                     .setType(res.getString("type"));
             medium.add(media);
@@ -156,7 +159,7 @@ public class Media {
         return this.imageURL;
     }
 
-    public Media setMediaURL(String url){
+    public Media setImageURL(String url){
         this.imageURL = url;
         return this;
     }
@@ -173,6 +176,14 @@ public class Media {
     public Media setType(String type) {
         this.type = type;
         return this;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
     }
 
     @Override

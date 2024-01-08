@@ -1,4 +1,4 @@
-package common.exception;;
+package common.exception;
 
 public class SuspiciousTransactionException extends PaymentException {
 	public SuspiciousTransactionException() {

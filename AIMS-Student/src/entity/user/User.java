@@ -17,9 +17,9 @@ public class User {
     private String email;
     private String address;
     private String phone;
-    private String username;
-    private String password;
-    private int role;
+    private final String username;
+    private final String password;
+    private final int role;
 
     public User(String name, String email, String address, String phone, String username, String password, int role) {
         this.name = name;
@@ -76,10 +76,10 @@ public class User {
     }
 
     public static class UserAccount{
-        private String name;
-        private String username;
-        private String password;
-        private UserRole role;
+        private final String name;
+        private final String username;
+        private final String password;
+        private final UserRole role;
 
         public UserAccount(String username, String password, UserRole role, String name) {
             this.username = username;
@@ -105,7 +105,7 @@ public class User {
         }
     }
 
-    public static enum UserRole{
+    public enum UserRole{
         ADMIN(1), USER(2);
 
         int value;

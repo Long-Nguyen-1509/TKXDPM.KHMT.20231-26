@@ -1,31 +1,22 @@
 package subsystem.interbank;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
-import common.exception.InternalServerErrorException;
-import common.exception.InvalidCardException;
-import common.exception.InvalidTransactionAmountException;
-import common.exception.InvalidVersionException;
-import common.exception.NotEnoughBalanceException;
-import common.exception.NotEnoughTransactionInfoException;
-import common.exception.SuspiciousTransactionException;
-import common.exception.UnrecognizedException;
+import com.fasterxml.jackson.databind.JsonNode;
 import entity.payment.CreditCard;
-import entity.payment.PaymentTransaction;
-import utils.Configs;
+import entity.payment.Transaction;
 import utils.MyMap;
-import utils.Utils;
 
 public class InterbankSubsystemController {
 
-	private static final String PUBLIC_KEY = "AQzdE8O/fR8=";
-	private static final String SECRET_KEY = "BUXj/7/gHHI=";
-	private static final String PAY_COMMAND = "pay";
-	private static final String VERSION = "1.0.0";
+	private static final InterbankBoundary interbankBoundary = new InterbankBoundary();
 
-	private static InterbankBoundary interbankBoundary = new InterbankBoundary();
-
-	public PaymentTransaction refund(CreditCard card, int amount, String contents) {
+	public Transaction refund(CreditCard card, int amount, String contents) {
 		return null;
 	}
 	
@@ -33,68 +24,36 @@ public class InterbankSubsystemController {
 		return ((MyMap) data).toJSON();
 	}
 
-	public PaymentTransaction payOrder(CreditCard card, int amount, String contents) {
-		Map<String, Object> transaction = new MyMap();
-
-		try {
-			transaction.putAll(MyMap.toMyMap(card));
-		} catch (IllegalArgumentException | IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			throw new InvalidCardException();
-		}
-		transaction.put("command", PAY_COMMAND);
-		transaction.put("transactionContent", contents);
-		transaction.put("amount", amount);
-		transaction.put("createdAt", Utils.getToday());
-
-		Map<String, Object> requestMap = new MyMap();
-		requestMap.put("version", VERSION);
-		requestMap.put("transaction", transaction);
-
-		String responseText = interbankBoundary.query(Configs.PROCESS_TRANSACTION_URL, generateData(requestMap));
-		MyMap response = null;
-		try {
-			response = MyMap.toMyMap(responseText, 0);
-		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
-			throw new UnrecognizedException();
-		}
-
-		return makePaymentTransaction(response);
+	public void registerTransaction(int transactionId, int amount) {
+		interbankBoundary.postTransaction(transactionId, amount*100);
 	}
 
-	private PaymentTransaction makePaymentTransaction(MyMap response) {
-		if (response == null)
-			return null;
-		MyMap transcation = (MyMap) response.get("transaction");
-		CreditCard card = new CreditCard((String) transcation.get("cardCode"), (String) transcation.get("owner"),
-				Integer.parseInt((String) transcation.get("cvvCode")), (String) transcation.get("dateExpired"));
-		PaymentTransaction trans = new PaymentTransaction((String) response.get("errorCode"), card,
-				(String) transcation.get("transactionId"), (String) transcation.get("transactionContent"),
-				Integer.parseInt((String) transcation.get("amount")), (String) transcation.get("createdAt"));
+	public String fetchTransactionStatus(int transactionId) {
 
-		switch (trans.getErrorCode()) {
-		case "00":
-			break;
-		case "01":
-			throw new InvalidCardException();
-		case "02":
-			throw new NotEnoughBalanceException();
-		case "03":
-			throw new InternalServerErrorException();
-		case "04":
-			throw new SuspiciousTransactionException();
-		case "05":
-			throw new NotEnoughTransactionInfoException();
-		case "06":
-			throw new InvalidVersionException();
-		case "07":
-			throw new InvalidTransactionAmountException();
-		default:
-			throw new UnrecognizedException();
+		try (ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1)) {
+			CompletableFuture<String> future = new CompletableFuture<>();
+			executorService.scheduleWithFixedDelay(() -> {
+				System.out.println("Fetching");
+				JsonNode jsonNode = interbankBoundary.getStatus(transactionId);
+				String status = jsonNode.get("status").asText();
+				if (!status.equals("Pending")) {
+					future.complete(status);
+				}
+			}, 0,3, TimeUnit.SECONDS);
+
+			try {
+				String result = future.get(120, TimeUnit.SECONDS);
+				System.out.println(result);
+				return result;
+			} catch (Exception e) {
+				e.printStackTrace();
+				return "Timed out";
+			} finally {
+				executorService.shutdown();
+			}
 		}
 
-		return trans;
-	}
+    }
+
 
 }

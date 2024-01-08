@@ -26,7 +26,7 @@ import views.screen.FXMLScreenHandler;
 
 public class MediaHandler extends FXMLScreenHandler {
 
-	private static Logger LOGGER = Utils.getLogger(MediaHandler.class.getName());
+	private static final Logger LOGGER = Utils.getLogger(MediaHandler.class.getName());
 
 	@FXML
 	protected HBox hboxMedia;
@@ -57,7 +57,7 @@ public class MediaHandler extends FXMLScreenHandler {
 
 	private CartMedia cartMedia;
 	private Spinner<Integer> spinner;
-	private CartScreenHandler cartScreen;
+	private final CartScreenHandler cartScreen;
 
 	public MediaHandler(String screenPath, CartScreenHandler cartScreen) throws IOException {
 		super(screenPath);
