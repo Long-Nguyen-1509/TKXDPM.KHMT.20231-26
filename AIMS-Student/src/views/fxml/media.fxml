@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="mediaImage" fitHeight="211.0" fitWidth="247.0" layoutX="45.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Me/New%20folder/no-image-icon-15.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelName" layoutX="300.0" layoutY="39.0" prefHeight="20.0" prefWidth="62.0" text="Tên" />
+      <TextField fx:id="tfName" layoutX="362.0" layoutY="37.0" prefHeight="25.0" prefWidth="204.0" />
+      <Label fx:id="labelType" layoutX="300.0" layoutY="76.0" prefHeight="20.0" prefWidth="62.0" text="Loại" />
+      <TextField fx:id="tfPrice" layoutX="362.0" layoutY="111.0" prefHeight="25.0" prefWidth="204.0" />
+      <Label fx:id="labelPrice" layoutX="300.0" layoutY="113.0" prefHeight="20.0" prefWidth="62.0" text="Đơn giá" />
+      <Label fx:id="labelQuantity" layoutX="300.0" layoutY="151.0" prefHeight="20.0" prefWidth="62.0" text="Số lượng" />
+      <TextField fx:id="tfQuantity" layoutX="362.0" layoutY="149.0" prefHeight="25.0" prefWidth="204.0" />
+      <Button fx:id="btnChangeImage" layoutX="117.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="change" />
+      <Button fx:id="btnSave" layoutX="457.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="change" />
+      <ChoiceBox fx:id="cbType" layoutX="362.0" layoutY="74.0" prefHeight="25.0" prefWidth="204.0" />
+   </children>
+</Pane>

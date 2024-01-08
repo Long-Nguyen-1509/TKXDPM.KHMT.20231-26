@@ -146,6 +146,12 @@ public class Media {
         stm.executeUpdate(sql);
     }
 
+    public void deleteById(int id) throws SQLException {
+        String sql = "delete from Media where id=" + id + ";";
+        Statement stm = AIMSDB.getConnection().createStatement();
+        stm.execute(sql);
+    }
+
     // getter and setter 
     public int getId() {
         return this.id;

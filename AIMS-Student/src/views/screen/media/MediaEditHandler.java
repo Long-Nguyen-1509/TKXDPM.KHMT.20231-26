@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -32,37 +33,27 @@ public class MediaEditHandler extends BaseScreenHandler {
     private static Logger LOGGER = Utils.getLogger(MediaEditHandler.class.getName());
 
     @FXML
-    private Pane pane;
+    protected AnchorPane pane;
     @FXML
     protected ImageView mediaImage;
     @FXML
     protected Button btnChangeImage;
     @FXML
-    protected Label labelName;
-    @FXML
     protected TextField tfName;
-    @FXML
-    protected Label labelType;
     @FXML
     protected ChoiceBox<String> cbType;
     @FXML
-    protected Label labelCategory;
-    @FXML
     protected TextField tfCategory;
-    @FXML
-    protected Label labelValue;
     @FXML
     protected TextField tfValue;
     @FXML
-    protected Label labelPrice;
-    @FXML
     protected TextField tfPrice;
-    @FXML
-    protected Label labelQuantity;
     @FXML
     protected TextField tfQuantity;
     @FXML
     protected Button btnSave;
+    @FXML
+    protected Button btnDelete;
     @FXML
     protected Label labelWarning;
 
@@ -76,6 +67,7 @@ public class MediaEditHandler extends BaseScreenHandler {
         this.parent = parent;
         try {
             labelWarning.setVisible(false);
+            btnDelete.setVisible(false);
             cbType.setItems(FXCollections.observableArrayList(Media.getMediaType()));
             cbType.setValue(Media.getMediaType().get(0));
             tfValue.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -95,6 +87,7 @@ public class MediaEditHandler extends BaseScreenHandler {
             });
             btnChangeImage.setOnMouseClicked(e -> chooseImage());
             btnSave.setOnMouseClicked(e -> saveMediaInfo());
+            btnDelete.setOnMouseClicked(e -> deleteMedia());
             setMediaInfo();
         }catch (Exception e) {
             labelWarning.setText("Có lỗi xảy ra xin vui lòng thử lại");
@@ -117,6 +110,8 @@ public class MediaEditHandler extends BaseScreenHandler {
             mediaImage.setFitHeight(250);
             mediaImage.setFitWidth(250);
             mediaImage.setImage(image);
+
+            btnDelete.setVisible(true);
         }
         else {
             File file = new File("assets/images/default_images.png");
@@ -156,6 +151,18 @@ public class MediaEditHandler extends BaseScreenHandler {
         catch (Exception e) {
             labelWarning.setText("Có lỗi xảy ra xin vui lòng thử lại");
             labelWarning.setVisible(true);
+        }
+    }
+
+    private void deleteMedia() {
+        try {
+            this.media.deleteById(this.media.getId());
+            this.closed();
+            parent.reload();
+        } catch (SQLException ex) {
+            labelWarning.setText("Có lỗi xảy ra xin vui lòng thử lại");
+            labelWarning.setVisible(true);
+            ex.printStackTrace();
         }
     }
 

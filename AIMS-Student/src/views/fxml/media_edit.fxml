@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+   <Button fx:id="btnSave" layoutX="449.0" layoutY="372.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="96.0" text="Save" />
+   <Button fx:id="btnChangeImage" layoutX="278.0" layoutY="291.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="Chose Image" />
+   <TextField fx:id="tfQuantity" layoutX="340.0" layoutY="243.0" prefHeight="25.0" prefWidth="204.0" />
+   <Label fx:id="labelQuantity" layoutX="278.0" layoutY="245.0" prefHeight="20.0" prefWidth="62.0" text="Số lượng" />
+   <Label fx:id="labelPrice" layoutX="278.0" layoutY="161.0" prefHeight="20.0" prefWidth="62.0" text="Value" />
+   <TextField fx:id="tfValue" layoutX="340.0" layoutY="159.0" prefHeight="25.0" prefWidth="204.0" />
+   <Label fx:id="labelType" layoutX="279.0" layoutY="71.0" prefHeight="20.0" prefWidth="62.0" text="Type" />
+   <TextField fx:id="tfName" layoutX="341.0" layoutY="28.0" prefHeight="25.0" prefWidth="204.0" />
+   <Label fx:id="labelName" layoutX="279.0" layoutY="30.0" prefHeight="20.0" prefWidth="62.0" text="Title" />
+      <ChoiceBox fx:id="cbType" layoutX="341.0" layoutY="69.0" prefHeight="25.0" prefWidth="204.0" />
+      <Label fx:id="labelWarning" layoutX="279.0" layoutY="333.0" prefHeight="17.0" prefWidth="264.0" text="Có lỗi xảy ra vui lòng thử lại" textFill="#f80000" />
+      <AnchorPane layoutX="31.0" layoutY="34.0" maxHeight="276.0" maxWidth="250.0" prefHeight="276.0" prefWidth="225.0">
+         <children>
+         <ImageView fx:id="mediaImage" fitHeight="279.0" fitWidth="225.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../../../Me/New%20folder/no-image-icon-15.png" />
+            </image>
+               <viewport>
+                  <Rectangle2D height="279.0" width="250.0" />
+               </viewport>
+         </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="labelCategory" layoutX="278.0" layoutY="119.0" prefHeight="20.0" prefWidth="62.0" text="Category" />
+      <TextField fx:id="tfCategory" layoutX="340.0" layoutY="117.0" prefHeight="25.0" prefWidth="204.0" />
+      <TextField fx:id="tfPrice" layoutX="340.0" layoutY="202.0" prefHeight="25.0" prefWidth="204.0" />
+      <Label fx:id="labelPrice1" layoutX="278.0" layoutY="204.0" prefHeight="20.0" prefWidth="62.0" text="Price" />
+      <Button fx:id="btnDelete" layoutX="341.0" layoutY="372.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="96.0" text="Delete" textFill="RED" />
+</children>
+</AnchorPane>
