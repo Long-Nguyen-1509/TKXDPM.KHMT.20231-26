@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8762bb03-4010-4f08-b45d-7e9ea533b9b0" name="Changes" comment="finish placeorder payorder">
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/.idea/AIMS-Student.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/db/.fuse_hidden0000007d00000003" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/db/.fuse_hidden0000007d00000006" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/db/aims.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/db/aims.mwb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/db/aims.sqbpro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/db/aims_sqlite.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/Media.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/aims_cover_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/aims_db_design.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/book/book1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/book/book10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/book/book11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/book/book12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/book/book2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/book/book3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/book/book4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/book/book5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/book/book6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/book/book7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/book/book8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/book/book9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/cart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/cd/cd1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/cd/cd10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/cd/cd11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/cd/cd12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/cd/cd2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/cd/cd3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/cd/cd4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/cd/cd5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/cd/cd6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/cd/cd7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/cd/cd8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/cd/cd9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/dvd/dvd1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/dvd/dvd10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/dvd/dvd11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/dvd/dvd12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/dvd/dvd2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/dvd/dvd3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/dvd/dvd4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/dvd/dvd5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/dvd/dvd6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/dvd/dvd7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/dvd/dvd8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/dvd/dvd9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/tickerror.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/assets/images/tickgreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/db/.fuse_hidden0000007d00000003" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/db/.fuse_hidden0000007d00000006" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/db/aims.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/db/aims.mwb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/db/aims.sqbpro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/db/aims_sqlite.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/Media.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/aims_cover_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/aims_db_design.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/book/book1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/book/book10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/book/book11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/book/book12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/book/book2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/book/book3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/book/book4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/book/book5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/book/book6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/book/book7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/book/book8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/book/book9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/cart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/cd/cd1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/cd/cd10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/cd/cd11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/cd/cd12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/cd/cd2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/cd/cd3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/cd/cd4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/cd/cd5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/cd/cd6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/cd/cd7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/cd/cd8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/cd/cd9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/dvd/dvd1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/dvd/dvd10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/dvd/dvd11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/dvd/dvd12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/dvd/dvd2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/dvd/dvd3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/dvd/dvd4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/dvd/dvd5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/dvd/dvd6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/dvd/dvd7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/dvd/dvd8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/dvd/dvd9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/tickerror.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/images/tickgreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/admin.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/cart.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/invoice.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/media_admin.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/media_cart.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/media_home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/media_invoice.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/order.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/payment.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/popup.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/result.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/shipping.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/classes/production/AIMS-Student/views/fxml/splash.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.base/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.base/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.base/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.controls/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.controls/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.controls/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.fxml/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.fxml/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.fxml/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.graphics/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.graphics/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.graphics/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.graphics/jpeg_fx.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.graphics/mesa3d.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.media/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.media/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.media/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.media/directshow.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.media/glib.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.media/gstreamer.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.media/libffi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.swing/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.swing/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.swing/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.web/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.web/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.web/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.web/icu_web.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.web/libxml2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.web/libxslt.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/legal/javafx.web/webkit.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/javafx-swt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/javafx.base.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/javafx.controls.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/javafx.fxml.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/javafx.graphics.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/javafx.media.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/javafx.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/javafx.swing.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/javafx.web.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libavplugin-54.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libavplugin-56.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libavplugin-57.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libavplugin-ffmpeg-56.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libavplugin-ffmpeg-57.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libavplugin-ffmpeg-58.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libdecora_sse.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libfxplugins.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libglass.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libglassgtk2.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libglassgtk3.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libgstreamer-lite.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libjavafx_font.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libjavafx_font_freetype.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libjavafx_font_pango.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libjavafx_iio.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libjfxmedia.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libjfxwebkit.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libprism_common.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libprism_es2.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/libprism_sw.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/linux/javafx-sdk-15/lib/src.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/byte-buddy-1.14.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/byte-buddy-agent-1.14.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/common/commons-lang3-3.14.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/core-3.5.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/jackson-annotations-2.16.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/jackson-core-2.16.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/jackson-databind-2.16.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-console-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-console-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-datetime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-debug-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-errorhandling-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-file-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-file-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-file-l2-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-handle-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-interlocked-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-libraryloader-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-localization-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-memory-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-namedpipe-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-processenvironment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-processthreads-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-processthreads-l1-1-1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-profile-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-rtlsupport-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-synch-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-synch-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-sysinfo-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-timezone-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-core-util-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-conio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-convert-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-environment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-filesystem-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-locale-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-math-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-multibyte-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-private-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-process-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-runtime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-stdio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-time-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/api-ms-win-crt-utility-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/decora_sse.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/fxplugins.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/glass.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/glib-lite.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/gstreamer-lite.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/javafx_font.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/javafx_iio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/jfxmedia.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/jfxwebkit.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/msvcp140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/prism_common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/prism_d3d.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/prism_sw.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/ucrtbase.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/bin/vcruntime140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.base/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.base/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.base/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.controls/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.controls/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.controls/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.fxml/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.fxml/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.fxml/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.graphics/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.graphics/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.graphics/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.graphics/jpeg_fx.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.graphics/mesa3d.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.media/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.media/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.media/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.media/directshow.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.media/glib.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.media/gstreamer.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.media/libffi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.swing/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.swing/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.swing/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.web/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.web/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.web/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.web/icu_web.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.web/libxml2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.web/libxslt.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/legal/javafx.web/webkit.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/lib/javafx-swt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/lib/javafx.base.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/lib/javafx.controls.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/lib/javafx.fxml.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/lib/javafx.graphics.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/lib/javafx.media.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/lib/javafx.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/lib/javafx.swing.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/lib/javafx.web.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/javafx-sdk-15/lib/src.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/junit5/junit-jupiter-api-5.8.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/junit5/junit-jupiter-engine-5.8.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/junit5/junit-jupiter-params-5.8.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/junit5/junit-platform-commons-1.8.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/junit5/junit-platform-engine-1.8.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/junit5/junit5-0.5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/mockito-core-5.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/lib/win/sqlite-jdbc-3.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/AimsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/InternalServerErrorException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/InvalidCardException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/InvalidDeliveryInfoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/InvalidTransactionAmountException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/InvalidVersionException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/LoginException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/MediaNotAvailableException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/MediaUpdateException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/NotEnoughBalanceException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/NotEnoughTransactionInfoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/PaymentException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/PlaceOrderException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/ProcessInvoiceException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/SuspiciousTransactionException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/UnrecognizedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/common/exception/ViewCartException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/controller/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/controller/BaseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/controller/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/controller/OrderHistoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/controller/PaymentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/controller/PlaceOrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/controller/ViewCartController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/cart/Cart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/cart/CartMedia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/db/AIMSDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/invoice/Invoice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/media/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/media/CD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/media/DVD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/media/Media.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/order/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/order/OrderMedia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/payment/CreditCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/payment/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/shipping/Shipment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/entity/user/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/subsystem/InterbankInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/subsystem/InterbankSubsystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/subsystem/interbank/InterbankBoundary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/subsystem/interbank/InterbankSubsystemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/utils/API.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/utils/Configs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/utils/DBUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/utils/MyMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/utils/QRGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/utils/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/admin.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/cart.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/invoice.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/media_admin.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/media_cart.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/media_home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/media_invoice.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/order.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/payment.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/popup.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/result.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/shipping.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/fxml/splash.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/BaseScreenHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/FXMLScreenHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/SplashScreenHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/admin/AdminHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/admin/MediaAdminHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/cart/CartScreenHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/cart/MediaHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/home/HomeScreenHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/home/MediaHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/invoice/InvoiceScreenHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/invoice/MediaInvoiceScreenHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/login/LoginHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/order_history/OrderHistoryScreenHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/payment/PaymentScreenHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/payment/ResultScreenHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/popup/PopupScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/src/views/screen/shipping/ShippingScreenHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/test/OrderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/test/PlaceOrderControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AIMS-Student/test/ValidatePhoneNumberTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Long-Nguyen-1509&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="45a65655-8b44-47f2-b9ca-1d5b8fe1150e" />
+        <option name="url" value="https://github.com/Long-Nguyen-1509/TKXDPM.KHMT.20231-26.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2YzV2QXWiwbwFZEiZzMS7mrOj0L" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Notification.DisplayName-DoNotAsk-Vcs Important Messages": "VCS important messages",
+    "Notification.DoNotAsk-Vcs Important Messages": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/git/New folder/TKXDPM.KHMT.20231-26-cloned/TKXDPM.KHMT.20231-26/AIMS-Student-customer/lib/win/javafx-sdk-15/lib",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.keymap"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\git\New folder\TKXDPM.KHMT.20231-26\AIMS-Student\lib\win" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="AIMS-Student" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\javafx-sdk-21.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIMS-Student" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OrderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaceOrderControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIMS-Student" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlaceOrderControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaceOrderControllerTest.calculateShippingFees_Subtotal100000_Any_RushOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIMS-Student" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlaceOrderControllerTest" />
+      <option name="METHOD_NAME" value="calculateShippingFees_Subtotal100000_Any_RushOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaceOrderControllerTest.calculateShippingFees_Subtotal99000_HCM_NoRushOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIMS-Student" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlaceOrderControllerTest" />
+      <option name="METHOD_NAME" value="calculateShippingFees_Subtotal99000_HCM_NoRushOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.OrderTest" />
+      <item itemvalue="JUnit.PlaceOrderControllerTest" />
+      <item itemvalue="JUnit.PlaceOrderControllerTest.calculateShippingFees_Subtotal99000_HCM_NoRushOrder" />
+      <item itemvalue="JUnit.PlaceOrderControllerTest.calculateShippingFees_Subtotal100000_Any_RushOrder" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.OrderTest" />
+        <item itemvalue="JUnit.PlaceOrderControllerTest" />
+        <item itemvalue="JUnit.PlaceOrderControllerTest.calculateShippingFees_Subtotal99000_HCM_NoRushOrder" />
+        <item itemvalue="JUnit.PlaceOrderControllerTest.calculateShippingFees_Subtotal100000_Any_RushOrder" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8762bb03-4010-4f08-b45d-7e9ea533b9b0" name="Changes" comment="" />
+      <created>1701528187720</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701528187720</updated>
+      <workItem from="1701932366941" duration="453000" />
+    </task>
+    <task id="LOCAL-00001" summary="finish placeorder payorder">
+      <option name="closed" value="true" />
+      <created>1704461626688</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704461626688</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="feature/payment" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature/payment" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finish placeorder payorder" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish placeorder payorder" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="entity.order.Order" memberName="deliveryInfo" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AIMS_Student$App.ic" NAME="App Coverage Results" MODIFIED="1703786340097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
